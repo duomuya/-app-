@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatService/ChatService-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ChatService/ChatService-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CourseService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CourseService/CourseService-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CourseService/CourseService-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ExamService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ExamService/ExamService-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ExamService/ExamService-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HomeworkService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HomeworkService/HomeworkService-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/HomeworkService/HomeworkService-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UserService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UserService/UserService-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/UserService/UserService-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/registry" charset="UTF-8" />
+  </component>
+</project>

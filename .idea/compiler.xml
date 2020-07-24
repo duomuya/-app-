@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ChatServiceinterface" />
+        <module name="gateway" />
+        <module name="ExamServiceinterface" />
+        <module name="CourseServiceservice" />
+        <module name="eduapp" />
+        <module name="UserServiceinterface" />
+        <module name="UserServiceservice" />
+        <module name="ChatServiceservice" />
+        <module name="HomeworkServiceservice" />
+        <module name="ExamServiceservice" />
+        <module name="CourseServiceinterface" />
+        <module name="HomeworkServiceinterface" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ChatServiceinterface" options="-parameters" />
+      <module name="ChatServiceservice" options="-parameters" />
+      <module name="CourseServiceinterface" options="-parameters" />
+      <module name="CourseServiceservice" options="-parameters" />
+      <module name="ExamServiceinterface" options="-parameters" />
+      <module name="ExamServiceservice" options="-parameters" />
+      <module name="HomeworkServiceinterface" options="-parameters" />
+      <module name="HomeworkServiceservice" options="-parameters" />
+      <module name="UserServiceinterface" options="-parameters" />
+      <module name="UserServiceservice" options="-parameters" />
+      <module name="eduapp" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+    </option>
+  </component>
+</project>
