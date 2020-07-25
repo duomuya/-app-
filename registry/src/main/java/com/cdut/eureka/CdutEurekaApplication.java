@@ -8,8 +8,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  *   * Copyright (C), 2020-2020, eduapp
  *   * FileName: CdutEurekaApplication
  *   * Author:   healer
- *   * Date:     2020/7/24 23:23
- *   * Description: eureka启动类
+ *   * Date:     2020/7/25 15:51
+ *   * Description:
  *  
  */
 @SpringBootApplication

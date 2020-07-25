@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/generated-sources/annotations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/generated-sources/annotations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/target/generated-sources/annotations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/generated-sources/annotations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/target/generated-sources/annotations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/generated-sources/annotations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/registry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/registry.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/src/main/java/com/cdut/eureka/CdutEurekaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/registry/src/main/java/com/cdut/eureka/CdutEurekaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/src/test/java/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/target/classes/com/cdut/eureka/CdutEurekaApplication.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +54,7 @@
   <component name="ProjectId" id="1f8YheeWZ1g4yotAMYlRFQX0koG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -106,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserService">
+  <component name="RunManager" selected="Spring Boot.CdutEurekaApplication">
     <configuration name="CdutEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="registry" />
       <extension name="coverage">
@@ -200,7 +192,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4c92662c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1f071d1d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -221,7 +213,9 @@
       <workItem from="1595601313244" duration="3786000" />
       <workItem from="1595605208618" duration="2622000" />
       <workItem from="1595607929372" duration="1924000" />
-      <workItem from="1595637991107" duration="4554000" />
+      <workItem from="1595637991107" duration="5724000" />
+      <workItem from="1595648693022" duration="4935000" />
+      <workItem from="1595662776948" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="add 项目框架搭建">
       <created>1595608697232</created>
@@ -237,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595641246585</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mdf 修改端口">
+      <created>1595643412640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595643412640</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +249,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -257,6 +260,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add 项目框架搭建" />
     <MESSAGE value="add 空文件,上传包结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 空文件,上传包结构" />
+    <MESSAGE value="mdf 修改端口" />
+    <option name="LAST_COMMIT_MESSAGE" value="mdf 修改端口" />
   </component>
 </project>
