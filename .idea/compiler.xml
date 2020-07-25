@@ -9,15 +9,15 @@
         <module name="ChatServiceinterface" />
         <module name="gateway" />
         <module name="ExamServiceinterface" />
-        <module name="CourseServiceservice" />
+        <module name="HomeworkServiceinterface" />
         <module name="eduapp" />
         <module name="UserServiceinterface" />
-        <module name="UserServiceservice" />
         <module name="ChatServiceservice" />
+        <module name="CourseServiceinterface" />
         <module name="HomeworkServiceservice" />
         <module name="ExamServiceservice" />
-        <module name="CourseServiceinterface" />
-        <module name="HomeworkServiceinterface" />
+        <module name="CourseServiceservice" />
+        <module name="UserServiceservice" />
       </profile>
     </annotationProcessing>
   </component>
