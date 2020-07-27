@@ -2,17 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-interface/src/main/java/com/cdut/pojo/Homework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/controller/HomeworkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/mapper/HomeworkMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/HomeworkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/impl/HomeworkServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/ResultCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/mapper/HomeworkMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/registry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/registry.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/src/main/java/com/cdut/eureka/CdutEurekaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/registry/src/main/java/com/cdut/eureka/CdutEurekaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/src/test/java/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/target/classes/com/cdut/eureka/CdutEurekaApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cduteduapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/CourseService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/com/cdut/ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/com/cdut/ExamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamService/ExamService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/com/cdut/HomeworkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/com/cdut/HomeworkService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/target/classes/com/cdut/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/target/classes/com/cdut/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/cdut/zuul/CdutZuulApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/com/cdut/zuul/CdutZuulApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/registry.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/target/classes/com/cdut/eureka/CdutEurekaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/registry/target/classes/com/cdut/eureka/CdutEurekaApplication.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +45,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -40,9 +63,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\MavenRepository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../apache-maven-3.5.4" />
-        <option name="userSettingsFile" value="D:\DevelopTools\apache-maven-3.5.4\conf\settings.xml" />
+        <option name="localRepository" value="E:\IDEA\maven\LocalWareHouse" />
+        <option name="mavenHome" value="E:/IDEA/maven/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:/IDEA/maven/apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -51,8 +74,16 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="376" />
+    <option name="y" value="37" />
+    <option name="width" value="1550" />
+    <option name="height" value="963" />
+  </component>
   <component name="ProjectId" id="1f8YheeWZ1g4yotAMYlRFQX0koG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
@@ -63,22 +94,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/registry/target/classes" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595775448525" />
+    <property name="last_opened_file_path" value="E:/SVN/本地仓库/zhiliaotangLiteApp/trunk/support/training/后端学习SpringBoot+mybatis/郑超凡/cloudDemo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2812106" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cdut.utils" />
+      <recent name="com.cdut.config" />
       <recent name="com.cdut.zuul.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\git\project\cduteduapp\HomeworkService\HomeworkService-service\src\main\java\com\cdut\utils" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\registry\target\classes" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\registry\src\main\resources" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\gateway\src\main\resources" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\UserService\UserService-service\src\main\resources" />
-      <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\HomeworkService\HomeworkService-service\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -97,8 +131,9 @@
         </RuleState>
       </list>
     </option>
+    <option name="contentProportion" value="0.3436073" />
   </component>
-  <component name="RunManager" selected="Spring Boot.CdutEurekaApplication">
+  <component name="RunManager" selected="Spring Boot.UserService">
     <configuration name="CdutEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="registry" />
       <extension name="coverage">
@@ -126,7 +161,7 @@
       </method>
     </configuration>
     <configuration name="ChatService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ChatServiceservice" />
+      <module name="ChatService-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.cdut.*" />
@@ -134,12 +169,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.ChatService" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CourseService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="CourseServiceservice" />
+      <module name="CourseService-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.cdut.*" />
@@ -147,12 +183,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.CourseService" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ExamService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="ExamServiceservice" />
+      <module name="ExamService-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.cdut.*" />
@@ -160,19 +197,21 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.ExamService" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="HomeworkService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="HomeworkServiceservice" />
+      <module name="HomeworkService-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.HomeworkService" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="UserService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="UserServiceservice" />
+      <module name="UserService-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.cdut.*" />
@@ -180,10 +219,20 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.UserService" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CdutEurekaApplication" />
+      <item itemvalue="Spring Boot.CdutZuulApplication" />
+      <item itemvalue="Spring Boot.ChatService" />
+      <item itemvalue="Spring Boot.CourseService" />
+      <item itemvalue="Spring Boot.ExamService" />
+      <item itemvalue="Spring Boot.HomeworkService" />
+      <item itemvalue="Spring Boot.UserService" />
+    </list>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
@@ -192,7 +241,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1f071d1d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1ceb6c83" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -216,6 +265,8 @@
       <workItem from="1595637991107" duration="5724000" />
       <workItem from="1595648693022" duration="4935000" />
       <workItem from="1595662776948" duration="925000" />
+      <workItem from="1595664679133" duration="3346000" />
+      <workItem from="1595728539776" duration="18305000" />
     </task>
     <task id="LOCAL-00001" summary="add 项目框架搭建">
       <created>1595608697232</created>
@@ -238,11 +289,28 @@
       <option name="project" value="LOCAL" />
       <updated>1595643412640</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mdf 增加homework模块连接数据库增删改查功能">
+      <created>1595775332172</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595775332172</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -261,6 +329,7 @@
     <MESSAGE value="add 项目框架搭建" />
     <MESSAGE value="add 空文件,上传包结构" />
     <MESSAGE value="mdf 修改端口" />
-    <option name="LAST_COMMIT_MESSAGE" value="mdf 修改端口" />
+    <MESSAGE value="mdf 增加homework模块连接数据库增删改查功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="mdf 增加homework模块连接数据库增删改查功能" />
   </component>
 </project>

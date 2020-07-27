@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdut.mapper.PaperMapper">
+    <resultMap id="BaseResultMap" type="com.cdut.pojo.Paper">
+        <id column="paper_id" jdbcType="VARCHAR" property="paperId"/>
+        <result column="paper_des" jdbcType="VARCHAR" property="paperDes"/>
+        <result column="paper_name" jdbcType="VARCHAR" property="paperName"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        paper_id, paper_des, paper_name, user_id
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from Paper
+        where paper_id = #{paperId,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from Paper
+        where paper_id = #{paperId,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="com.cdut.pojo.Paper">
+        insert into Paper (paper_id, paper_des, paper_name,
+        user_id)
+        values (#{paperId,jdbcType=VARCHAR}, #{paperDes,jdbcType=VARCHAR}, #{paperName,jdbcType=VARCHAR},
+        #{userId,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.cdut.pojo.Paper">
+        insert into Paper
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="paperId != null">
+                paper_id,
+            </if>
+            <if test="paperDes != null">
+                paper_des,
+            </if>
+            <if test="paperName != null">
+                paper_name,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="paperId != null">
+                #{paperId,jdbcType=VARCHAR},
+            </if>
+            <if test="paperDes != null">
+                #{paperDes,jdbcType=VARCHAR},
+            </if>
+            <if test="paperName != null">
+                #{paperName,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.cdut.pojo.Paper">
+        update Paper
+        <set>
+            <if test="paperDes != null">
+                paper_des = #{paperDes,jdbcType=VARCHAR},
+            </if>
+            <if test="paperName != null">
+                paper_name = #{paperName,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where paper_id = #{paperId,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.cdut.pojo.Paper">
+        update Paper
+        set paper_des = #{paperDes,jdbcType=VARCHAR},
+        paper_name = #{paperName,jdbcType=VARCHAR},
+        user_id = #{userId,jdbcType=VARCHAR}
+        where paper_id = #{paperId,jdbcType=VARCHAR}
+    </update>
+
+    <delete id="batchDeleteByIds">
+        delete from Paper
+        where paper_id in
+        (
+        <foreach collection="list" item="paperId" separator=",">
+            #{paperId}
+        </foreach>
+        )
+    </delete>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+    select *from Paper
+  </select>
+</mapper>

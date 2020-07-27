@@ -6,18 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ChatServiceinterface" />
+        <module name="ChatService-service" />
+        <module name="UserServiceinterface" />
+        <module name="HomeworkServiceservice" />
         <module name="gateway" />
+        <module name="UserServiceservice" />
+        <module name="ChatService-interface" />
+        <module name="registry" />
+        <module name="UserService-interface" />
+        <module name="ExamService-service" />
+        <module name="HomeworkService-interface" />
         <module name="ExamServiceinterface" />
         <module name="HomeworkServiceinterface" />
-        <module name="HomeworkServiceservice" />
-        <module name="UserServiceinterface" />
-        <module name="registry" />
-        <module name="CourseServiceinterface" />
-        <module name="ChatServiceservice" />
         <module name="ExamServiceservice" />
         <module name="CourseServiceservice" />
-        <module name="UserServiceservice" />
+        <module name="ChatServiceinterface" />
+        <module name="UserService-service" />
+        <module name="ExamService-interface" />
+        <module name="CourseServiceinterface" />
+        <module name="CourseService-service" />
+        <module name="CourseService-interface" />
+        <module name="HomeworkService-service" />
+        <module name="ChatServiceservice" />
       </profile>
     </annotationProcessing>
   </component>
