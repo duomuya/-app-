@@ -2,6 +2,8 @@ package com.cdut.controller;
 
 import com.cdut.pojo.Homework;
 import com.cdut.service.HomeworkService;
+import com.cdut.utils.Result;
+import com.cdut.utils.ResultCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,8 +27,9 @@ public class HomeworkController {
     }
 
     /**
-     * @discript http://localhost:8088/homework/findAll
-     *            返回json数据
+     * @discript 返回json数据
+     *            http://localhost:8084/homework/findAll 不通过网关
+     *            http://desktop-t6igd80:10010/eduapp/homeworkservice/homework/findAll 通过网关
      * @param
      * @return java.util.List<com.cdut.pojo.Homework>
      * @author fan
@@ -34,12 +37,12 @@ public class HomeworkController {
      */
     @RequestMapping(value = "findAll", method = {RequestMethod.GET})
     @ResponseBody
-    public List<Homework> findAll(){
-        return homeworkService.queryAll();
+    public Result findAll(){
+        return Result.success(homeworkService.queryAll());
     }
 
     /**
-     * @discript http://localhost:8086/homework/findAll
+     * @discript http://localhost:8084/homework/findAll
      * @param id
      * @return com.cdut.pojo.Homework
      * @author fan
@@ -47,8 +50,8 @@ public class HomeworkController {
      */
     @RequestMapping(value = "findById/{id}", method = {RequestMethod.GET})
     @ResponseBody
-    public Homework findById(@PathVariable("id") String id){
-        return homeworkService.findById(id);
+    public Result findById(@PathVariable("id") String id){
+        return Result.success(homeworkService.findById(id));
     }
 
     /**
@@ -60,8 +63,13 @@ public class HomeworkController {
      */
     @RequestMapping(value = "deleteById/{id}", method = {RequestMethod.GET})
     @ResponseBody
-    public int deleteById(@PathVariable("id") String id){
-        return homeworkService.deleteById(id);
+    public Result deleteById(@PathVariable("id") String id){
+        int status = homeworkService.deleteById(id);
+        if (status<=0){
+            return Result.failure(ResultCode.HOMEWORK_DELETE_FAILED);
+        }else {
+            return Result.success();
+        }
     }
 
     /**
@@ -73,13 +81,18 @@ public class HomeworkController {
      */
     @RequestMapping(value = "insert", method = {RequestMethod.GET})
     @ResponseBody
-    public int insert(){
+    public Result insert(){
         Homework homework = new Homework();
         homework.setHomework_id("666");
         homework.setCourse_name("软件体系结构");
         homework.setHomework_content("插入信息");
         homework.setHomework_answer("插入答案");
-        return homeworkService.insert(homework);
+        int status = homeworkService.insert(homework);
+        if (status<=0){
+            return Result.failure(ResultCode.HOMEWORK_INSERT_FAILED);
+        }else {
+            return Result.success();
+        }
     }
 
     /**
@@ -91,12 +104,17 @@ public class HomeworkController {
      */
     @RequestMapping(value = "update/{id}", method = {RequestMethod.GET})
 
-    public int update(@PathVariable("id") int id){
+    public Result update(@PathVariable("id") int id){
         Homework homework = new Homework();
         homework.setHomework_id("666");
         homework.setCourse_name("update");
         homework.setHomework_answer("update");
         homework.setHomework_content("update");
-        return homeworkService.update(homework);
+        int status = homeworkService.update(homework);
+        if (status<=0){
+            return Result.failure(ResultCode.HOMEWORK_UPDATE_FAILED);
+        }else {
+            return Result.success();
+        }
     }
 }
