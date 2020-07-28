@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdut.mapper.QuestionMapper">
+    <resultMap id="BaseResultMap" type="com.cdut.pojo.Question">
+        <id column="q_id" jdbcType="VARCHAR" property="qId"/>
+        <result column="q_content" jdbcType="VARCHAR" property="qContent"/>
+        <result column="q_answer" jdbcType="VARCHAR" property="qAnswer"/>
+        <result column="q_score" jdbcType="INTEGER" property="qScore"/>
+        <result column="q_A" jdbcType="VARCHAR" property="qA"/>
+        <result column="q_B" jdbcType="VARCHAR" property="qB"/>
+        <result column="q_C" jdbcType="VARCHAR" property="qC"/>
+        <result column="q_D" jdbcType="VARCHAR" property="qD"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    q_id, q_content, q_answer, q_score, q_A, q_B, q_C, q_D
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from Questions
+        where q_id = #{qId,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from Questions
+    where q_id = #{qId,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.cdut.pojo.Question">
+    insert into Questions (q_id, q_content, q_answer, 
+      q_score, q_A, q_B, q_C, 
+      q_D)
+    values (#{qId,jdbcType=VARCHAR}, #{qContent,jdbcType=VARCHAR}, #{qAnswer,jdbcType=VARCHAR}, 
+      #{qScore,jdbcType=INTEGER}, #{qA,jdbcType=VARCHAR}, #{qB,jdbcType=VARCHAR}, #{qC,jdbcType=VARCHAR}, 
+      #{qD,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.cdut.pojo.Question">
+        insert into Questions
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="qId != null">
+                q_id,
+            </if>
+            <if test="qContent != null">
+                q_content,
+            </if>
+            <if test="qAnswer != null">
+                q_answer,
+            </if>
+            <if test="qScore != null">
+                q_score,
+            </if>
+            <if test="qA != null">
+                q_A,
+            </if>
+            <if test="qB != null">
+                q_B,
+            </if>
+            <if test="qC != null">
+                q_C,
+            </if>
+            <if test="qD != null">
+                q_D,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="qId != null">
+                #{qId,jdbcType=VARCHAR},
+            </if>
+            <if test="qContent != null">
+                #{qContent,jdbcType=VARCHAR},
+            </if>
+            <if test="qAnswer != null">
+                #{qAnswer,jdbcType=VARCHAR},
+            </if>
+            <if test="qScore != null">
+                #{qScore,jdbcType=INTEGER},
+            </if>
+            <if test="qA != null">
+                #{qA,jdbcType=VARCHAR},
+            </if>
+            <if test="qB != null">
+                #{qB,jdbcType=VARCHAR},
+            </if>
+            <if test="qC != null">
+                #{qC,jdbcType=VARCHAR},
+            </if>
+            <if test="qD != null">
+                #{qD,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.cdut.pojo.Question">
+        update Questions
+        <set>
+            <if test="qContent != null">
+                q_content = #{qContent,jdbcType=VARCHAR},
+            </if>
+            <if test="qAnswer != null">
+                q_answer = #{qAnswer,jdbcType=VARCHAR},
+            </if>
+            <if test="qScore != null">
+                q_score = #{qScore,jdbcType=INTEGER},
+            </if>
+            <if test="qA != null">
+                q_A = #{qA,jdbcType=VARCHAR},
+            </if>
+            <if test="qB != null">
+                q_B = #{qB,jdbcType=VARCHAR},
+            </if>
+            <if test="qC != null">
+                q_C = #{qC,jdbcType=VARCHAR},
+            </if>
+            <if test="qD != null">
+                q_D = #{qD,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where q_id = #{qId,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.cdut.pojo.Question">
+    update Questions
+    set q_content = #{qContent,jdbcType=VARCHAR},
+      q_answer = #{qAnswer,jdbcType=VARCHAR},
+      q_score = #{qScore,jdbcType=INTEGER},
+      q_A = #{qA,jdbcType=VARCHAR},
+      q_B = #{qB,jdbcType=VARCHAR},
+      q_C = #{qC,jdbcType=VARCHAR},
+      q_D = #{qD,jdbcType=VARCHAR}
+    where q_id = #{qId,jdbcType=VARCHAR}
+  </update>
+
+    <delete id="batchDeleteByIds">
+        delete from Questions
+        where q_id in
+        (
+        <foreach collection="list" item="questionId" separator=",">
+            #{questionId}
+        </foreach>
+        )
+    </delete>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+    select *from Questions
+  </select>
+</mapper>
