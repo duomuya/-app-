@@ -5,9 +5,16 @@
 
 server:
   port: 10010
+  tomcat:
+    max-http-post-size: 102400000
+    max-http-header-size: 102400000
 spring:
   application:
     name: api-gateway
+  servlet:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 25600MB
 zuul:
   prefix: /eduapp # 路由路径前缀
   routes:
@@ -16,6 +23,7 @@ zuul:
       homeworkservice: /homeworkservice/** # 微服务的映射路径
       examservice: /examservice/** # 微服务的映射路径
       courseservice: /courseservice/** # 微服务的映射路径
+
 eureka:
   client:
     registry-fetch-interval-seconds: 5 # 获取服务列表的周期：5s
