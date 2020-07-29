@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!--映射文件与接口的对应关系-->
+<mapper namespace="com.cdut.mapper.HomeworkMapper">
+    <!--
+    id:接口中的方法名
+    parameterType：参数类型
+    resultType：返回值类型
+    -->
+    <select id="findAll" resultType="com.cdut.pojo.Homework">
+        select * from Homework
+    </select>
+
+    <select id="findById" resultType="com.cdut.pojo.Homework" parameterType="java.lang.String">
+        select * from Homework where homework_id=#{homework_id}
+    </select>
+
+    <insert id="insert" parameterType="com.cdut.pojo.Homework">
+        insert into Homework(homework_id,course_name,homework_content,homework_answer) values(#{homework_id},#{course_name},#{homework_content},#{homework_answer})
+    </insert>
+
+    <delete id="deleteById" parameterType="java.lang.String">
+        delete from Homework where homework_id=#{homework_id}
+    </delete>
+
+    <update id="update" parameterType="com.cdut.pojo.Homework">
+        update Homework set course_name = #{course_name}, homework_content = #{homework_content}, homework_answer = #{homework_answer} where homework_id = #{homework_id}
+    </update>
+</mapper>

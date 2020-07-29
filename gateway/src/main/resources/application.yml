@@ -21,7 +21,7 @@ zuul:
       chatservice: /chatservice/** # 微服务的映射路径
       userservice: /userservice/** # 微服务的映射路径
       homeworkservice: /homeworkservice/** # 微服务的映射路径
-      examservice: /examservice/** # 微服务的映射路径
+      examService: /examservice/** # 微服务的映射路径
       courseservice: /courseservice/** # 微服务的映射路径
 
 eureka:
