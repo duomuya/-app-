@@ -67,11 +67,12 @@ public class LoginController {
         String user_id = UUID.randomUUID().toString();
         int phoneNum = (Integer)map.get("account");
         String passwd = (String) map.get("password");
-
+        int key =3;
         User user = new User();
         user.setUser_id(user_id);
         user.setPhoneNum(phoneNum);
         user.setPasswd(passwd);
+        user.setKey(key);
 
         if(phoneNum== userService.findByphoneNum(phoneNum).getPhoneNum()){
             return Result.failure(USER_HAS_EXIST);

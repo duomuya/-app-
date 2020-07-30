@@ -17,27 +17,38 @@
     <select id="count" resultType="java.lang.Integer">
         select count(*) from User
     </select>
-    <select id="update" resultType="java.lang.Integer">
+    <update id="update" parameterType="com.cdut.pojo.User" >
         update User set user_name = #{user_name} and department_name = #{department_name} and email = #{email} where phoneNum = #{phoneNum}
-    </select>
-    <select id="deleteById" resultType="java.lang.Integer">
+    </update>
+    <delete id="deleteById" parameterType="java.lang.String" >
         delete from User where user_id = #{user_id}
+    </delete>
+    <delete id="deletelist">
+        delete from User where user_id in 
+        (
+        <foreach collection="list" item="delist" separator=",">
+            #{delist}
+        </foreach>
+        )
+        
+    </delete>
+    <insert id="register" parameterType="com.cdut.pojo.User" >
+        INSERT INTO User (user_id,user_name, passwd,phoneNum,key) VALUES (#{user_id},#{phoneNum}, #{passwd},#{phoneNum},#{key})
+    </insert>
+    <select id="findByphoneNum" parameterType="java.lang.Integer" resultType="com.cdut.pojo.User">
+        select * from User where phoneNum = #{phoneNum}
     </select>
-    <select id="deletelist" resultType="java.lang.Integer">
-        delete from User where user_id in #{delist}
-    </select>
+    
+
+
 
     <select id="Sel" resultType="com.cdut.pojo.User">
         select * from User where user_id = #{user_id}
     </select>
-
     <select id="login" resultType="com.cdut.pojo.User">
         SELECT * FROM User where user_name = #{user_name} and passwd = #{passwd}
     </select>
 
-    <insert id="register" parameterType="com.cdut.pojo.User">
-        INSERT INTO User (user_id,user_name, passwd) VALUES (#{user_id},#{user_name}, #{passwd})
-    </insert>
     <!--<insert id="insert" parameterType="com.example.entity.User">
         insert into User (userId, userName, phone,
         sex)
