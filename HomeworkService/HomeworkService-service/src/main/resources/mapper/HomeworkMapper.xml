@@ -10,15 +10,15 @@
     resultType：返回值类型
     -->
     <select id="findAll" resultType="com.cdut.pojo.Homework">
-        select * from Homework
+        select * from Homework,Courses where Homework.course_id = Courses.course_id
     </select>
 
     <select id="findById" resultType="com.cdut.pojo.Homework" parameterType="java.lang.String">
-        select * from Homework where homework_id=#{homework_id}
+        select * from Homework where teacher_id=#{teacher_id}
     </select>
 
     <insert id="insert" parameterType="com.cdut.pojo.Homework">
-        insert into Homework(homework_id,course_name,homework_content,homework_answer) values(#{homework_id},#{course_name},#{homework_content},#{homework_answer})
+        insert into Homework(homework_id,teacher_id,homework_content,homework_answer,course_id) values(#{homework_id},#{teacher_id},#{homework_content},#{homework_answer},#{course_id})
     </insert>
 
     <delete id="deleteById" parameterType="java.lang.String">
@@ -26,6 +26,6 @@
     </delete>
 
     <update id="update" parameterType="com.cdut.pojo.Homework">
-        update Homework set course_name = #{course_name}, homework_content = #{homework_content}, homework_answer = #{homework_answer} where homework_id = #{homework_id}
+        update Homework set course_id = #{course_id}, teacher_id = #{teacher_id}, homework_content = #{homework_content}, homework_answer = #{homework_answer} where homework_id = #{homework_id}
     </update>
 </mapper>

@@ -117,7 +117,17 @@ public enum ResultCode {
     /**
      * 作业修改失败
      */
-    HOMEWORK_UPDATE_FAILED(5003, "修改作业失败");
+    HOMEWORK_UPDATE_FAILED(5004, "修改作业失败"),
+
+    /*
+    * 用户作业表更新失败
+    */
+    USERHOMEWORK_UPDATE_FAILED(5010, "学生作业修改失败"),
+
+    /*
+    * 添加（提交）作业失败
+    */
+    USERHOMEWORK_INSERT_FAILED(5011, "学生作业修改失败");
 
 	/* ******************聊天管理相关错误时，状态码范围在：5001~5999********************* */
 
