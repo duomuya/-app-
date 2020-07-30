@@ -86,7 +86,7 @@ public class UserController {
     @RequestMapping("/batch_delete_user")
     @ResponseBody
     public Result batch_delete_user(@RequestBody Map<String, Object> map){
-        String user_id = (String) map.get("delist");
+        List delist = (List) map.get("delist");
         int su=userService.deletelist(delist);
         if(su!=0){
             return Result.success();
