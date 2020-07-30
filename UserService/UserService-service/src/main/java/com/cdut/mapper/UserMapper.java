@@ -11,4 +11,18 @@ public interface UserMapper {
     * @return
     * */
     public List<User> findByName(String username);
+    List<User> findAll();
+    User findById(String user_id);
+
+    int insert(User user);
+
+    User Sel(String user_id);
+    User login(String user_name,String passwd);
+    int register(User user);
+
+    int deleteById(String user_id);
+    User findByphoneNum(int phoneNum);
+    int count();
+    int update(User user);
+    int deletelist(List delist);
 }

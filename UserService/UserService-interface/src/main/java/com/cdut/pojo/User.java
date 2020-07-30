@@ -6,19 +6,19 @@ public class User implements Serializable {
 
     private String user_id;
     private String user_name;
-    private String phoneNum;
+    private int phoneNum;
     private String email;
     private String passwd;
     private String department_name;
     private String class_name;
-    private String key;
+    private int key;
     private String headImg;
 
     public User(){
 
     }
 
-    public User(String user_id , String user_name, String phoneNum, String email, String passwd, String department_name, String class_name, String key, String headImg) {
+    public User(String user_id , String user_name, int phoneNum, String email, String passwd, String department_name, String class_name, int key, String headImg) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.phoneNum = phoneNum;
@@ -61,11 +61,11 @@ public class User implements Serializable {
         this.user_name = user_name;
     }
 
-    public String getPhoneNum() {
+    public int getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(String phoneNum) {
+    public void setPhoneNum(int phoneNum) {
         this.phoneNum = phoneNum;
     }
 
@@ -101,11 +101,11 @@ public class User implements Serializable {
         this.class_name = class_name;
     }
 
-    public String getKey() {
+    public int getKey() {
         return key;
     }
 
-    public void setKey(String key) {
+    public void setKey(int key) {
         this.key = key;
     }
 
