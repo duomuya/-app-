@@ -1,56 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/api/CoursesApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/pojo/Courses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/pojo/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/pojo/ResultCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/target/classes/com/cdut/pojo/Courses.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/controller/CoursesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/mapper/CoursesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/service/CoursesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/service/Impl/CoursesServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/mapper/CoursesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/static/coursesVideo/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/controller/CoursesController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/mapper/CoursesMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/service/CoursesService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/service/Impl/CoursesServiceImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/mapper/CoursesMapper.xml" afterDir="false" />
-=======
     <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="mdf 增加homework模块连接数据库增删改查功能">
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/ChatService/ChatService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/-app-.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/CourseService.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/com/cdut/ChatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/com/cdut/ChatService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatService/ChatService.iml" beforeDir="false" />
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/CourseService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService.iml" beforeDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/ExamService/ExamService.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/registry.iml" beforeDir="false" />
-    </list>
-=======
       <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/com/cdut/ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/com/cdut/ExamService.class" afterDir="false" />
@@ -83,7 +45,6 @@
     <ignored path="$PROJECT_DIR$/gateway/target/" />
     <ignored path="$PROJECT_DIR$/CourseService/CourseService-interface/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -282,7 +243,6 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -327,15 +287,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-<<<<<<< HEAD
-        <option name="localRepository" value="E:\maven\mavenRepository" />
-        <option name="mavenHome" value="E:/maven/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="E:\maven\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
-=======
         <option name="localRepository" value="E:\IDEA\maven\LocalWareHouse" />
         <option name="mavenHome" value="E:/IDEA/maven/apache-maven-3.5.4" />
         <option name="userSettingsFile" value="E:/IDEA/maven/apache-maven-3.5.4\conf\settings.xml" />
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -354,12 +308,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-<<<<<<< HEAD
-  <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
-=======
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -573,7 +521,6 @@
       </pane>
       <pane id="PackagesPane" />
     </panes>
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -585,21 +532,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2812106" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-=======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595909130892" />
     <property name="last_opened_file_path" value="E:/SVN/本地仓库/zhiliaotangLiteApp/trunk/support/training/后端学习SpringBoot+mybatis/郑超凡/cloudDemo" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2812106" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -608,11 +546,7 @@
       <recent name="com.cdut.zuul.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-<<<<<<< HEAD
-      <recent name="C:\Users\16233\Desktop\知了堂实训\git2\-app-\CourseService\CourseService-service\src\main\resources\static\cousersVideo" />
-=======
       <recent name="E:\git\project\cduteduapp\HomeworkService\HomeworkService-service\src\main\java\com\cdut\utils" />
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\registry\target\classes" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\registry\src\main\resources" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\gateway\src\main\resources" />
@@ -625,10 +559,6 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-<<<<<<< HEAD
-  </component>
-  <component name="RunManager" selected="Spring Boot.CdutZuulApplication">
-=======
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -642,7 +572,6 @@
     <option name="contentProportion" value="0.3436073" />
   </component>
   <component name="RunManager" selected="Spring Boot.UserService">
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
     <configuration name="CdutEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="registry" />
       <extension name="coverage">
@@ -669,10 +598,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="ChatService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ChatService-service" />
-=======
     <configuration name="ChatService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ChatService-service" />
       <extension name="coverage">
@@ -681,18 +606,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.ChatService" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="CourseService (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-=======
     <configuration name="CourseService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <module name="CourseService-service" />
       <extension name="coverage">
         <pattern>
@@ -706,10 +626,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="ExamService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ExamService-service" />
-=======
     <configuration name="ExamService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ExamService-service" />
       <extension name="coverage">
@@ -718,7 +634,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.ExamService" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
@@ -733,10 +648,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="UserService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="UserService-service" />
-=======
     <configuration name="UserService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="UserService-service" />
       <extension name="coverage">
@@ -745,7 +656,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cdut.UserService" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
@@ -756,46 +666,25 @@
       <item itemvalue="Spring Boot.CdutEurekaApplication" />
       <item itemvalue="Spring Boot.CdutZuulApplication" />
       <item itemvalue="Spring Boot.ChatService" />
-<<<<<<< HEAD
-      <item itemvalue="Spring Boot.CourseService (1)" />
-      <item itemvalue="Spring Boot.UserService" />
-      <item itemvalue="Spring Boot.ExamService" />
-      <item itemvalue="Spring Boot.HomeworkService" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.CourseService (1)" />
-      </list>
-    </recent_temporary>
-=======
       <item itemvalue="Spring Boot.CourseService" />
       <item itemvalue="Spring Boot.ExamService" />
       <item itemvalue="Spring Boot.HomeworkService" />
       <item itemvalue="Spring Boot.UserService" />
     </list>
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
   </component>
   <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.18169399" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1f071d1d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -814,14 +703,8 @@
       <workItem from="1595637991107" duration="5724000" />
       <workItem from="1595648693022" duration="4935000" />
       <workItem from="1595662776948" duration="925000" />
-<<<<<<< HEAD
-      <workItem from="1595755121929" duration="7545000" />
-      <workItem from="1595807097274" duration="27091000" />
-      <workItem from="1595836099224" duration="30518000" />
-=======
       <workItem from="1595664679133" duration="3346000" />
       <workItem from="1595728539776" duration="18305000" />
->>>>>>> 3f217746eb417072b3c69abf70696827bb7e20c4
     </task>
     <task id="LOCAL-00001" summary="add 项目框架搭建">
       <created>1595608697232</created>
@@ -1166,63 +1049,5 @@
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595755643952">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1595755643952" />
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1595895930129">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1595895930129" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1595755260525">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1595755260525" />
-    <state width="1197" height="243" key="GridCell.Tab.0.bottom" timestamp="1595931915675">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595931915675" />
-    <state width="1197" height="243" key="GridCell.Tab.0.center" timestamp="1595931915674">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1595931915674" />
-    <state width="1197" height="243" key="GridCell.Tab.0.left" timestamp="1595931915673">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1595931915673" />
-    <state width="1197" height="243" key="GridCell.Tab.0.right" timestamp="1595931915674">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1595931915674" />
-    <state width="1197" height="243" key="GridCell.Tab.1.bottom" timestamp="1595931915675">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1595931915675" />
-    <state width="1197" height="243" key="GridCell.Tab.1.center" timestamp="1595931915675">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1595931915675" />
-    <state width="1197" height="243" key="GridCell.Tab.1.left" timestamp="1595931915675">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1595931915675" />
-    <state width="1197" height="243" key="GridCell.Tab.1.right" timestamp="1595931915675">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state width="1197" height="243" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1595931915675" />
-    <state x="299" y="72" key="Maven.ArtifactSearchDialog" timestamp="1595815518135">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="299" y="72" key="Maven.ArtifactSearchDialog/0.0.1536.834@0.0.1536.834" timestamp="1595815518135" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1595836173969">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1595836173969" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1595813494229">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1595813494229" />
   </component>
 </project>
