@@ -117,7 +117,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="mdf sql设计" />
+    <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="mdf UserController改动">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/utils/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/utils/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +157,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
@@ -159,7 +173,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595909130892" />
     <property name="last_opened_file_path" value="E:/SVN/本地仓库/zhiliaotangLiteApp/trunk/support/training/后端学习SpringBoot+mybatis/郑超凡/cloudDemo" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -306,6 +323,7 @@
       <workItem from="1595662776948" duration="925000" />
       <workItem from="1595664679133" duration="3346000" />
       <workItem from="1595728539776" duration="18305000" />
+      <workItem from="1596159426077" duration="4666000" />
     </task>
     <task id="LOCAL-00001" summary="add 项目框架搭建">
       <created>1595608697232</created>
@@ -342,11 +360,18 @@
       <option name="project" value="LOCAL" />
       <updated>1596120039406</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mdf UserController改动">
+      <created>1596120149127</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596120149127</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -376,24 +401,33 @@
     <MESSAGE value="mdf 修改端口" />
     <MESSAGE value="mdf 增加homework模块连接数据库增删改查功能" />
     <MESSAGE value="mdf sql设计" />
-    <option name="LAST_COMMIT_MESSAGE" value="mdf sql设计" />
+    <MESSAGE value="mdf UserController改动" />
+    <option name="LAST_COMMIT_MESSAGE" value="mdf UserController改动" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1173" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1596118057743">
+    <state x="1173" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1596163622062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1173" y="180" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596118057743" />
+    <state x="1173" y="180" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1596163622062" />
     <state x="770" y="430" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1596094857582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="770" y="430" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596094857582" />
+    <state x="43" y="71" key="DiffContextDialog" timestamp="1596159473175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="43" y="71" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596159473175" />
     <state x="344" y="78" key="SettingsEditor" timestamp="1596094922303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596094922303" />
-    <state x="904" y="184" width="1016" height="674" key="Vcs.Push.Dialog.v2" timestamp="1596120047735">
+    <state x="904" y="184" width="1016" height="674" key="Vcs.Push.Dialog.v2" timestamp="1596120158161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="904" y="184" width="1016" height="674" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596120047735" />
+    <state x="904" y="184" width="1016" height="674" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1596120158161" />
+    <state x="814" y="268" key="git4idea.merge.GitPullDialog" timestamp="1596159452448">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="814" y="268" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1596159452448" />
   </component>
 </project>

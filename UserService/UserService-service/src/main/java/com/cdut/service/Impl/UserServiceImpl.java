@@ -45,7 +45,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int add_user(User user) {
-        return 0;
+        return userMapper.add_user(user);
+    }
+
+    @Override
+    public int key_update(User user) {
+        return userMapper.key_update(user);
+    }
+
+    @Override
+    public List<User> pageQuery(int page, int size) {
+        return userMapper.pageQuery(page,size);
     }
 
     @Override

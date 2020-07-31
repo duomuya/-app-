@@ -8,18 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ChatService-service" />
         <module name="UserServiceinterface" />
-        <module name="ChatServiceservice" />
         <module name="HomeworkServiceservice" />
-        <module name="ExamService-service" />
         <module name="gateway" />
         <module name="ChatService-interface" />
+        <module name="CourseService-interface" />
         <module name="UserService-interface" />
-        <module name="CourseServiceservice" />
+        <module name="ExamService-service" />
         <module name="HomeworkService-interface" />
         <module name="ExamServiceinterface" />
         <module name="registry" />
         <module name="ExamServiceservice" />
         <module name="HomeworkServiceinterface" />
+        <module name="CourseServiceservice" />
         <module name="ChatServiceinterface" />
         <module name="UserService-service" />
         <module name="ExamService-interface" />
@@ -27,7 +27,7 @@
         <module name="CourseService-service" />
         <module name="UserServiceservice" />
         <module name="HomeworkService-service" />
-        <module name="CourseService-interface" />
+        <module name="ChatServiceservice" />
       </profile>
     </annotationProcessing>
   </component>

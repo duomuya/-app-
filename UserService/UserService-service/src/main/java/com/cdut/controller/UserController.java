@@ -28,10 +28,14 @@ public class UserController {
     @ResponseBody
     public Result show_Users(@RequestBody Map<String, Object> map){
         Integer page = (Integer) map.get("page");
-        Integer limit = (Integer)map.get("limit");
-        List<User> u1 = userService.queryUsers();
+        Integer size = (Integer)map.get("limit");
+        List<User> u1 = userService.pageQuery(page, size);
+        if(u1!=null){
+            return Result.success(u1);
+        }else {
+            return Result.failure(USER_QUERY_ERROR);
+        }
 
-        return Result.success(u1);
 
     }
     @RequestMapping("/add_user")
@@ -51,26 +55,36 @@ public class UserController {
         user.setEmail(email);
         user.setUser_name(user_name);
         user.setKey(key);
-        return Result.success();
-
+        int su=userService.add_user(user);
+        if(su!=0){
+            return Result.success();
+        }else {
+            return Result.failure(USER_INSERT_ERROR);
+        }
     }
     @RequestMapping("/update_user")
     @ResponseBody
     public Result update_user(@RequestBody Map<String, Object> map){
         int key = (Integer)map.get("key");
-        String passwd = (String) map.get("uId");
+        String user_name = (String) map.get("user_name");
+        int phoneNum = (Integer) map.get("phoneNum");
         String email = (String) map.get("email");
-        String passwd = (String) map.get("classId");
-        String passwd = (String) map.get("departmentId");
-        String key = (String) map.get("key");
+        String class_name = (String) map.get("class_name");
+        String department_name = (String) map.get("department_name");
 
-        user= userService.findByphoneNum()
-
-
-        user.setPasswd(email);
-
-        return Result.success();
-
+        User u1= userService.findByphoneNum(phoneNum);
+        u1.setEmail(email);
+        u1.setUser_name(user_name);
+        u1.setPasswd(email);
+        u1.setDepartment_name(department_name);
+        u1.setClass_name(class_name);
+        u1.setKey(key);
+        int su=userService.key_update(u1);
+        if(su!=0){
+            return Result.success();
+        }else {
+            return Result.failure(USER_UPDATE_ERROR);
+        }
     }
     @RequestMapping("/delete_user")
     @ResponseBody

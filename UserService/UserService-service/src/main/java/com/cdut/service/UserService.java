@@ -10,7 +10,7 @@ public interface UserService {
     public  User findById(String user_id);
     public int deleteById(String user_id);
     public int insert(User user);
-    public int add_user(User user);
+
     public int delete_user(User user);
     public List<User> show_users();
     public User Sel(String user_id);
@@ -21,4 +21,7 @@ public interface UserService {
     public int register(User user);
     public int update(User user);
     public int deletelist(List delist);
+    public int add_user(User user);
+    public int key_update(User user);
+    public List<User> pageQuery(int page,int size);
 }

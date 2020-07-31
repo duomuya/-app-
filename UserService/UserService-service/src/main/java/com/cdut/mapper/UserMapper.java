@@ -13,9 +13,7 @@ public interface UserMapper {
     public List<User> findByName(String username);
     List<User> findAll();
     User findById(String user_id);
-
     int insert(User user);
-
     User Sel(String user_id);
     User login(String user_name,String passwd);
     int register(User user);
@@ -25,4 +23,7 @@ public interface UserMapper {
     int count();
     int update(User user);
     int deletelist(List delist);
+    int add_user(User user);
+    int key_update(User user);
+    List<User> pageQuery(int page,int size);
 }

@@ -38,6 +38,15 @@
     <select id="findByphoneNum" parameterType="java.lang.Integer" resultType="com.cdut.pojo.User">
         select * from User where phoneNum = #{phoneNum}
     </select>
+    <insert id="add_user" parameterType="com.cdut.pojo.User" >
+        INSERT INTO User (user_id,user_name, passwd,phoneNum,email,key) VALUES (#{user_id},#{user_name}, #{passwd},#{phoneNum},#{email},#{key})
+    </insert>
+    <update id="key_update" parameterType="com.cdut.pojo.User" >
+        update User set phoneNum=#{phoneNum} and user_name = #{user_name} and class_name = #{class_name} and department_name = #{department_name} and email = #{email} and key = #{key} where user_id = #{user_id}
+    </update>
+    <select id="findByphoneNum" parameterType="java.lang.Integer" resultType="com.cdut.pojo.User">
+        select * from User limit (#{page}-1)*#{size},#{size}
+    </select>
     
 
 

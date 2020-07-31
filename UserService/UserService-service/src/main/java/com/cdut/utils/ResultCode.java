@@ -87,6 +87,11 @@ public enum ResultCode {
      */
     USER_HAS_EXIST(2011, "用户已存在"),
     /**
+     * 2012：用户信息更新到数据库失败
+     */
+    USER_QUERY_ERROR(2012, "用户查询失败"),
+    /**
+    /**
      * 2022：用户电话号码已经被注册
      */
     USER_PHONE_REGISTED(2022, "电话号码已被注册"),

@@ -56,7 +56,7 @@ public class LoginController {
                 if (u1.getKey()==3){
                     return Result.failure(USER_NOT);
                 }else {
-                    return Result.success();
+                    return Result.success(u1);
                 }
             }
         }
