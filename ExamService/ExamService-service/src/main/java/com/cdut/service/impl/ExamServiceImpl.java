@@ -2,12 +2,14 @@ package com.cdut.service.impl;
 
 import com.cdut.mapper.ExamMapper;
 import com.cdut.pojo.Exam;
+import com.cdut.pojo.Question;
 import com.cdut.service.ExamService;
 import org.bouncycastle.crypto.tls.UserMappingType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  *   * Copyright (C), 2020-2020, eduapp
@@ -61,5 +63,25 @@ public class ExamServiceImpl implements ExamService {
     @Override
     public int getAllCount() {
         return examMapper.selAllCount();
+    }
+
+    @Override
+    public List<Map<String,String>> showExamList(List<String> ids) {
+        return examMapper.showExamList(ids);
+    }
+
+    @Override
+    public Map<String,String> showExamDes(String examId) {
+        return examMapper.selectByPrimaryKey(examId);
+    }
+
+    @Override
+    public List<Question> getExamQuestion(String examId) {
+        return examMapper.getQuestions(examId);
+    }
+
+    @Override
+    public List<Map<String,String>> getMineExam(String uid) {
+        return examMapper.getMineExam(uid);
     }
 }

@@ -1,6 +1,7 @@
 package com.cdut.service;
 
 import com.cdut.pojo.Paper;
+import com.cdut.pojo.Paper_Q;
 
 import java.util.List;
 
@@ -23,5 +24,11 @@ public interface PaperService {
 
     int updatePaperById(Paper record);
 
-    List<Paper> QueryAll();
+    List<Paper> QueryAll(String user_id);
+
+    List<Paper> queryByPage(String uid, int page, int limit);
+
+    int getCount(String uid);
+
+    int addPaperQuestion(Paper_Q paper_q);
 }

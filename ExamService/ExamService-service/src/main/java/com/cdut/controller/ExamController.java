@@ -1,18 +1,26 @@
 package com.cdut.controller;
 
+import com.cdut.client.CourseClient;
 import com.cdut.pojo.Exam;
+import com.cdut.pojo.Question;
+import com.cdut.pojo.StuAnswer;
+import com.cdut.pojo.UPaper;
+import com.cdut.service.CorrectService;
 import com.cdut.service.ExamService;
+import com.cdut.service.QuestionService;
 import com.cdut.utils.Result;
 import com.cdut.utils.ResultCode;
+import com.google.gson.*;
+import com.google.gson.reflect.TypeToken;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import javax.websocket.server.PathParam;
+import java.util.*;
 
 /**
  *   * Copyright (C), 2020-2020, eduapp
@@ -27,11 +35,17 @@ import java.util.UUID;
 public class ExamController {
     @Autowired
     private ExamService examService;
+    @Autowired
+    private QuestionService questionService;
+    @Autowired
+    private CorrectService correctService;
+    @Autowired(required = false)
+    private CourseClient courseClient;
 
     @RequestMapping(value = "show_all_exam", method = RequestMethod.GET)
     @ResponseBody
     public Result showAllByPage(int page, int limit) {
-        System.out.println(page+"**"+limit);
+        System.out.println(page + "**" + limit);
         List<Exam> exams = examService.getByPage(page, limit);
         int count = examService.getAllCount();
         Object[] object = {exams, count};
@@ -47,6 +61,12 @@ public class ExamController {
         return Result.success(object);
     }
 
+    @RequestMapping(value = "show_mine_exam", method = RequestMethod.GET)
+    @ResponseBody
+    public Result showMineExam(String uid) {
+        return Result.success(examService.getMineExam(uid));
+    }
+
     @RequestMapping(value = "add_exam", method = RequestMethod.POST)
     @ResponseBody
     public Result addMyExam(@RequestBody Map<String, Object> map) {
@@ -54,7 +74,7 @@ public class ExamController {
         String examId = UUID.randomUUID().toString();
         String examName = (String) map.get("examName");
         String examDes = (String) map.get("examDes");
-        Date examStart = (Date) map.get("examStart");
+        String examStart = (String) map.get("examStart");
         Integer examLast = (Integer) map.get("examLast");
         Integer examNumber = (Integer) map.get("examNumber");
         String examCourse = (String) map.get("examCourse");
@@ -85,7 +105,7 @@ public class ExamController {
     public Result updateExam(@RequestBody Map<String, Object> map) {
         String examName = (String) map.get("examName");
         String examDes = (String) map.get("examDes");
-        Date examStart = (Date) map.get("examStart");
+        String examStart = (String) map.get("examStart");
         Integer examLast = (Integer) map.get("examLast");
         Integer examNumber = (Integer) map.get("examNumber");
         String examCourse = (String) map.get("examCourse");
@@ -131,4 +151,129 @@ public class ExamController {
             return Result.failure(ResultCode.EXAM_BATCH_DELETE_FAILED);
         }
     }
+
+
+    @RequestMapping(value = "get_courses", method = RequestMethod.GET)
+    @ResponseBody
+    public Result showCourse(String user_id) {
+        System.out.println(user_id);
+        System.out.println(courseClient);
+        return courseClient.allCoursesByUser(user_id);
+    }
+
+
+    /**
+     * 查询学生所有考试信息
+     *
+     * @return
+     */
+    @RequestMapping(value = "showExamList/{userId}", method = RequestMethod.GET)
+    @ResponseBody
+    public Result showExamList(@PathVariable("userId") String userId) {
+        //通过userID查询选课信息，返回选课课程id列表，根据课程id去exam表查询满足条件的考试
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setPrettyPrinting();
+        Gson gson = gsonBuilder.create();
+        JsonElement je = new JsonParser().parse(gson.toJson(courseClient.getCoursesByStudent(userId)));
+        List<String> cids = gson.fromJson(je.getAsJsonObject().get("data"), new TypeToken<List<String>>() {
+        }.getType());
+        return Result.success(examService.showExamList(cids));
+    }
+
+    @RequestMapping(value = "showExamDesc/{examId}", method = RequestMethod.GET)
+    @ResponseBody
+    public Result showExamDesc(@PathVariable("examId") String examId) {
+        System.out.println(examService.showExamDes(examId));
+        return Result.success(examService.showExamDes(examId));
+    }
+
+    @RequestMapping(value = "getPaper/{examId}", method = RequestMethod.GET)
+    @ResponseBody
+    public String getExamQuestions(@PathVariable("examId") String examId) {
+        List<String> choose = new ArrayList<>();
+        List<String> fill = new ArrayList<>();
+        List<Question> questions = examService.getExamQuestion(examId);
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setPrettyPrinting();
+        Gson gson = gsonBuilder.create();
+        System.out.println(questions);
+        for (Question item : questions) {
+            if (item.getqType().equals(1)) {
+                choose.add(gson.toJson(item));
+            } else if (item.getqType().equals(2)) {
+                fill.add(gson.toJson(item));
+            }
+        }
+        System.out.println("{\"choose\":" + choose + ",\"fill\":" + fill + "}");
+        return "{\"choose\":" + choose + ",\"fill\":" + fill + "}";
+    }
+
+
+    @RequestMapping(value = "submitPaper", method = RequestMethod.POST)
+    @ResponseBody
+    public Result submitPaper(@RequestBody Map<String, Object> map) {
+        Map map1 = (Map) map.get("answer");
+        List<StuAnswer> answers = new ArrayList<>();//用户答题情况列表
+        List<Object> objectList = (List<Object>) map1.get("questionList");
+        for (Object item : objectList) {
+            String qid = (String) ((Map) item).get("qId");
+            String myAnswer = (String) ((Map) item).get("qanswer");
+            Question question = questionService.selectQuestionById(qid);
+            if (myAnswer.equals(question.getqAnswer())){
+                //该题正确
+                StuAnswer stuAnswer = new StuAnswer();
+                stuAnswer.setqId(qid);
+                stuAnswer.setqMyAnswer(myAnswer);
+                stuAnswer.setqMyScore(question.getqScore());
+                stuAnswer.setqAnswer(question.getqAnswer());
+                stuAnswer.setqScore(question.getqScore());
+                System.out.println("我对了");
+                answers.add(stuAnswer);
+            } else {
+                //该题错误
+                StuAnswer stuAnswer = new StuAnswer();
+                stuAnswer.setqId(qid);
+                stuAnswer.setqMyAnswer(myAnswer);
+                stuAnswer.setqMyScore(0);
+                stuAnswer.setqAnswer(question.getqAnswer());
+                stuAnswer.setqScore(question.getqScore());
+                System.out.println("我错了");
+                answers.add(stuAnswer);
+            }
+            System.out.println(question.getqAnswer());//取出答案进行对比
+            System.out.println(question.getqScore());//取出分数
+            System.out.println(qid+"**"+myAnswer);
+        }
+//        System.out.println(answers+"!!!!");
+        //计算试卷得分
+        int score = 0;
+        for (StuAnswer answer : answers) {
+            score = answer.getqMyScore() + score;
+        }
+        String submitTime = (String) map1.get("submitTime");//提交时间
+        String uid = (String) map1.get("uId");
+        String examId = (String) map1.get("examId");
+        System.out.println("总得分为"+score);
+        Gson gson = new Gson();
+        String answerDetail = gson.toJson(answers);
+        System.out.println(answerDetail);
+
+        UPaper uPaper = new UPaper();
+        String upid = UUID.randomUUID().toString();
+        uPaper.setUpId(upid);
+        uPaper.setUserId(uid);
+        uPaper.setScore(score);
+        uPaper.setCommitTime(submitTime);
+        uPaper.setCheckStatus(1);
+        uPaper.setAnswerDetail(answerDetail);
+        uPaper.setExamId(examId);
+
+        //插入操作
+        int status = correctService.submitExam(uPaper);
+        if (status>=1){
+            return Result.success();
+        }
+        return Result.failure(ResultCode.EXAM_SUBMIT_FAILED);
+    }
+
 }

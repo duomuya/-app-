@@ -1,10 +1,12 @@
 package com.cdut.mapper;
 
 import com.cdut.pojo.Exam;
+import com.cdut.pojo.Question;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface ExamMapper {
@@ -45,7 +47,7 @@ public interface ExamMapper {
      * @param examId id
      * @return exam对象
      */
-    Exam selectByPrimaryKey(String examId);
+    Map<String,String> selectByPrimaryKey(String examId);
 
     /**
      * 根据主键进行非空更新
@@ -87,4 +89,18 @@ public interface ExamMapper {
      * @return 记录数
      */
     int selAllCount();
+
+    /**
+     * 根据课程id查询考试信息
+     * @param cids  课程id
+     * @return  map
+     */
+    List<Map<String,String>> showExamList(List<String> cids);
+
+    List<Exam> showExamDesc(String examId);
+
+    List<Question> getQuestions(String examId);
+
+    List<Map<String,String>> getMineExam(String uid);
+
 }

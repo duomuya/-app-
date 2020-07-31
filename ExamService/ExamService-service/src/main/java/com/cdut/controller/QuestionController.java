@@ -26,6 +26,11 @@ public class QuestionController {
     @Autowired
     private QuestionService questionService;
 
+    /**
+     * 展示所有的试题
+     *
+     * @return result
+     */
     @RequestMapping(value = "show_all_question", method = RequestMethod.GET)
     @ResponseBody
     public Result showAll() {
@@ -33,10 +38,21 @@ public class QuestionController {
         return Result.success(questions);
     }
 
+    /**
+     * 分页展示所有试题
+     *
+     * @param page  当前页
+     * @param limit 每页数量
+     * @return result封装结果
+     */
     @RequestMapping(value = "show_by_page", method = RequestMethod.GET)
     @ResponseBody
     public Result showByPage(int page, int limit) {
-        return Result.success();
+        System.out.println(page+"**"+limit);
+        List<Question> questions = questionService.queryByPage(page, limit);
+        int count = questionService.getCount();
+        Object[] object = {questions, count};
+        return Result.success(object);
     }
 
     @RequestMapping(value = "add_question", method = RequestMethod.POST)
@@ -51,6 +67,7 @@ public class QuestionController {
         String qB = (String) map.get("qB");
         String qC = (String) map.get("qC");
         String qD = (String) map.get("qD");
+        int qType = (int) map.get("qType");
         //封装
         Question question = new Question();
         question.setqId(qId);
@@ -61,6 +78,7 @@ public class QuestionController {
         question.setqB(qB);
         question.setqC(qC);
         question.setqD(qD);
+        question.setqType(qType);
 
         int status = questionService.addQuestion(question);
         if (status <= 0) {
@@ -82,6 +100,7 @@ public class QuestionController {
         String qB = (String) map.get("qB");
         String qC = (String) map.get("qC");
         String qD = (String) map.get("qD");
+        int qType = (int) map.get("qType");
         //封装
         Question question = new Question();
         question.setqId(qId);
@@ -92,6 +111,7 @@ public class QuestionController {
         question.setqB(qB);
         question.setqC(qC);
         question.setqD(qD);
+        question.setqType(qType);
 
         int status = questionService.updateQuestionById(question);
         if (status <= 0) {
@@ -123,5 +143,12 @@ public class QuestionController {
         } else {
             return Result.failure(ResultCode.QUESTION_BATCH_DELETE_FAILED);
         }
+    }
+
+    @RequestMapping(value = "getQuestionById", method = RequestMethod.GET)
+    @ResponseBody
+    public Result getQuestionById(String qId) {
+        Question question = questionService.getQuestionById(qId);
+        return Result.success(question);
     }
 }

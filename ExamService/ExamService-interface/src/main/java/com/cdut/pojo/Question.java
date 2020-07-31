@@ -26,6 +26,16 @@ public class Question {
 
     private String qD;
 
+    private Integer qType;
+
+    public Integer getqType() {
+        return qType;
+    }
+
+    public void setqType(Integer qType) {
+        this.qType = qType;
+    }
+
     public String getqId() {
         return qId;
     }

@@ -111,9 +111,7 @@ public enum ResultCode {
     Paper_ADD_FAILED(4012,"试卷添加失败"),
     Paper_DELETE_FAILED(4013,"试卷删除失败"),
     Paper_BATCH_DELETE_FAILED(4014,"试卷批量删除失败"),
-    Paper_UPDATE_FAILED(4015,"试卷信息更新失败"),
-    QUESTION_FIND_FAILED(4016,"未找到相关试题"),
-    EXAM_SUBMIT_FAILED(4017,"提交考试失败") ;
+    Paper_UPDATE_FAILED(4015,"试卷信息更新失败");
 
 
     /* ******************作业相关错误时，状态码范围在：5001~5999********************* */

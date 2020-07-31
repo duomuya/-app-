@@ -1,6 +1,7 @@
 package com.cdut.controller;
 
 import com.cdut.pojo.Paper;
+import com.cdut.pojo.Paper_Q;
 import com.cdut.service.PaperService;
 import com.cdut.utils.Result;
 import com.cdut.utils.ResultCode;
@@ -27,15 +28,20 @@ public class PaperController {
 
     @RequestMapping(value = "show_all_paper", method = RequestMethod.GET)
     @ResponseBody
-    public Result showAll() {
-        List<Paper> papers = paperService.QueryAll();
+    public Result showAll(String user_id) {
+        List<Paper> papers = paperService.QueryAll(user_id);
         return Result.success(papers);
     }
 
-    @RequestMapping(value = "show_by_page", method = RequestMethod.GET)
+    @RequestMapping(value = "show_my_by_page", method = RequestMethod.GET)
     @ResponseBody
-    public Result showByPage(int page, int limit) {
-        return Result.success();
+    public Result showByPage(String uid, int page, int limit) {
+        System.out.println(uid);
+        List<Paper> papers = paperService.queryByPage(uid, page, limit);
+        System.out.println(papers);
+        int count = paperService.getCount(uid);
+        Object[] object = {papers, count};
+        return Result.success(object);
     }
 
     @RequestMapping(value = "add_paper", method = RequestMethod.POST)
@@ -95,12 +101,30 @@ public class PaperController {
     @ResponseBody
     public Result batchDeletePaper(@RequestBody Map<String, Object> map) {
         List<String> ids = (List<String>) map.get("delList");
-
+        System.out.println("ids:"+ids);
         int status = paperService.batchDeletePaper(ids);
         if (status == ids.size()) {
             return Result.success();
         } else {
             return Result.failure(ResultCode.Paper_BATCH_DELETE_FAILED);
         }
+    }
+
+
+    @RequestMapping(value = "add_paper_question", method = RequestMethod.POST)
+    @ResponseBody
+    public Result addPaperQuestion(@RequestBody Map<String, Object> map) {
+        String pid = (String) map.get("pId");
+        List<String> ids = (List<String>) map.get("qList");
+        System.out.println("qid:"+pid);
+        System.out.println("qList:"+ids);
+        for (String item:ids) {
+            Paper_Q paper_q = new Paper_Q();
+            paper_q.setPaperId(pid);
+            paper_q.setPqId(UUID.randomUUID().toString());
+            paper_q.setQuestionId(item);
+            paperService.addPaperQuestion(paper_q);
+        }
+        return Result.success();
     }
 }

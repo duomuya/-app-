@@ -2,7 +2,9 @@ package com.cdut;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  *   * Copyright (C), 2020-2020, eduapp
@@ -14,6 +16,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableFeignClients
+@EnableCircuitBreaker  //开启熔断
 public class ExamService {
     public static void main(String[] args) {
         SpringApplication.run(ExamService.class,args);

@@ -91,6 +91,23 @@
     </delete>
 
     <select id="selectAll" resultMap="BaseResultMap">
-    select *from Paper
+    select *from Paper where user_id=#{user_id}
   </select>
+
+    <select id="selectByPage" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from Paper
+        where user_id=#{userId}
+        limit #{page},#{limit}
+    </select>
+
+    <select id="selCount" resultType="java.lang.Integer">
+    select count(*) from Paper where user_id=#{uid}
+  </select>
+
+    <insert id="insertPaperQuestion" parameterType="com.cdut.pojo.Paper_Q">
+        insert into Paper_Q (pq_id, paper_id, question_id)
+        values (#{pqId,jdbcType=VARCHAR}, #{paperId,jdbcType=VARCHAR}, #{questionId,jdbcType=VARCHAR})
+    </insert>
 </mapper>

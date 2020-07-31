@@ -2,6 +2,7 @@ package com.cdut.mapper;
 
 import com.cdut.pojo.Question;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -52,4 +53,18 @@ public interface QuestionMapper {
      * @return 试题列表
      */
     List<Question> selectAll();
+
+    /**
+     * 分页查询试题
+     * @param page 处理后的页码
+     * @param limit  每页数量
+     * @return 试题列表
+     */
+    List<Question> selectByPage(@Param("page") int page, @Param("limit") int limit);
+
+    /**
+     * 查询总条数
+     * @return 总条数
+     */
+    int selCount();
 }

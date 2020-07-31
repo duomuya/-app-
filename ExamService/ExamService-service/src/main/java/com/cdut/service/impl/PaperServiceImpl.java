@@ -2,6 +2,7 @@ package com.cdut.service.impl;
 
 import com.cdut.mapper.PaperMapper;
 import com.cdut.pojo.Paper;
+import com.cdut.pojo.Paper_Q;
 import com.cdut.service.PaperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -47,7 +48,22 @@ public class PaperServiceImpl implements PaperService {
     }
 
     @Override
-    public List<Paper> QueryAll() {
-        return paperMapper.selectAll();
+    public List<Paper> QueryAll(String user_id) {
+        return paperMapper.selectAll(user_id);
+    }
+
+    @Override
+    public List<Paper> queryByPage(String uid, int page, int limit) {
+        return paperMapper.selectByPage(uid,(page-1)*limit,limit);
+    }
+
+    @Override
+    public int getCount(String uid) {
+        return paperMapper.selCount(uid);
+    }
+
+    @Override
+    public int addPaperQuestion(Paper_Q paper_q) {
+        return paperMapper.insertPaperQuestion(paper_q);
     }
 }

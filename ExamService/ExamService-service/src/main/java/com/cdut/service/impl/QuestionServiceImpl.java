@@ -59,4 +59,19 @@ public class QuestionServiceImpl implements QuestionService {
     public List<Question> queryAll() {
         return questionMapper.selectAll();
     }
+
+    @Override
+    public List<Question> queryByPage(int page, int limit) {
+        return questionMapper.selectByPage((page-1)*limit,limit);
+    }
+
+    @Override
+    public int getCount() {
+        return questionMapper.selCount();
+    }
+
+    @Override
+    public Question getQuestionById(String qId) {
+        return questionMapper.selectByPrimaryKey(qId);
+    }
 }

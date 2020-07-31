@@ -7,20 +7,50 @@
         <result column="exam_des" jdbcType="VARCHAR" property="examDes"/>
         <result column="exam_last" jdbcType="INTEGER" property="examLast"/>
         <result column="exam_number" jdbcType="INTEGER" property="examNumber"/>
-        <result column="exam_start" jdbcType="TIMESTAMP" property="examStart"/>
+        <result column="exam_start" jdbcType="VARCHAR" property="examStart"/>
         <result column="exam_course" jdbcType="VARCHAR" property="examCourse"/>
         <result column="paper_id" jdbcType="VARCHAR" property="paperId"/>
         <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="paper_name" jdbcType="VARCHAR" property="paperName"/>
+        <result column="course_name" jdbcType="VARCHAR" property="courseName"/>
+    </resultMap>
+
+    <resultMap id="mapResult" type="java.util.HashMap">
+        <result property="examId" column="exam_id" jdbcType="VARCHAR"/>
+        <result property="examName" column="exam_name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="ExamDesResultMap" type="java.util.HashMap">
+        <id column="exam_id" jdbcType="VARCHAR" property="examId"/>
+        <result column="exam_name" jdbcType="VARCHAR" property="examName"/>
+        <result column="exam_des" jdbcType="VARCHAR" property="examDes"/>
+        <result column="exam_last" jdbcType="INTEGER" property="examLast"/>
+        <result column="exam_start" jdbcType="VARCHAR" property="examStart"/>
+        <result column="paper_score" jdbcType="VARCHAR" property="scoreAll"/>
+        <result column="paper_qnumber" jdbcType="VARCHAR" property="qNumber"/>
+    </resultMap>
+
+    <resultMap id="QuestionMap" type="com.cdut.pojo.Question">
+        <id column="q_id" jdbcType="VARCHAR" property="qId"/>
+        <result column="q_content" jdbcType="VARCHAR" property="qContent"/>
+        <result column="q_answer" jdbcType="VARCHAR" property="qAnswer"/>
+        <result column="q_score" jdbcType="INTEGER" property="qScore"/>
+        <result column="q_A" jdbcType="VARCHAR" property="qA"/>
+        <result column="q_B" jdbcType="VARCHAR" property="qB"/>
+        <result column="q_C" jdbcType="VARCHAR" property="qC"/>
+        <result column="q_D" jdbcType="VARCHAR" property="qD"/>
+        <result column="q_type" jdbcType="VARCHAR" property="qType"/>
     </resultMap>
     <sql id="Base_Column_List">
     exam_id, exam_name, exam_des, exam_last, exam_number, exam_start, exam_course, paper_id,
     user_id
   </sql>
-    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from Exam
-        where exam_id = #{examId,jdbcType=VARCHAR}
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ExamDesResultMap">
+       select a.exam_id,a.exam_name,a.exam_des,a.exam_start,a.exam_last,b.paper_score,b.paper_qnumber
+        from Exam a
+        join Paper b
+        on a.paper_id = b.paper_id
+        where a.exam_id = #{examId,jdbcType=VARCHAR}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from Exam
@@ -32,7 +62,7 @@
     exam_course, paper_id, user_id
     )
     values (#{examId,jdbcType=VARCHAR}, #{examName,jdbcType=VARCHAR}, #{examDes,jdbcType=VARCHAR},
-    #{examLast,jdbcType=INTEGER}, #{examNumber,jdbcType=INTEGER}, #{examStart,jdbcType=TIMESTAMP},
+    #{examLast,jdbcType=INTEGER}, #{examNumber,jdbcType=INTEGER}, #{examStart,jdbcType=VARCHAR},
     #{examCourse,jdbcType=VARCHAR}, #{paperId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}
     )
   </insert>
@@ -84,7 +114,7 @@
                 #{examNumber,jdbcType=INTEGER},
             </if>
             <if test="examStart != null">
-                #{examStart,jdbcType=TIMESTAMP},
+                #{examStart,jdbcType=VARCHAR},
             </if>
             <if test="examCourse != null">
                 #{examCourse,jdbcType=VARCHAR},
@@ -113,7 +143,7 @@
                 exam_number = #{examNumber,jdbcType=INTEGER},
             </if>
             <if test="examStart != null">
-                exam_start = #{examStart,jdbcType=TIMESTAMP},
+                exam_start = #{examStart,jdbcType=VARCHAR},
             </if>
             <if test="examCourse != null">
                 exam_course = #{examCourse,jdbcType=VARCHAR},
@@ -133,7 +163,7 @@
     exam_des = #{examDes,jdbcType=VARCHAR},
     exam_last = #{examLast,jdbcType=INTEGER},
     exam_number = #{examNumber,jdbcType=INTEGER},
-    exam_start = #{examStart,jdbcType=TIMESTAMP},
+    exam_start = #{examStart,jdbcType=VARCHAR},
     exam_course = #{examCourse,jdbcType=VARCHAR},
     paper_id = #{paperId,jdbcType=VARCHAR},
     user_id = #{userId,jdbcType=VARCHAR}
@@ -166,10 +196,31 @@
     </delete>
 
     <select id="selectByUserId" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from Exam
-        where user_id=#{userId}
+        select a.exam_id,a.exam_name,a.exam_des,a.exam_start,a.exam_last,a.exam_number,b.course_name,c.paper_name
+        from Exam a
+        inner join Courses b
+        on a.exam_course=b.course_id
+        inner join Paper c
+        on a.paper_id=c.paper_id
+        where a.user_id=#{userId}
         limit #{pageStart},#{pageLimit}
+    </select>
+
+    <select id="showExamList" parameterType="java.util.List" resultMap="mapResult">
+        SELECT exam_id,exam_name from Exam
+        WHERE exam_course in
+        (
+        <foreach collection="list" item="cid" separator=",">
+            #{cid}
+        </foreach>
+        )
+    </select>
+
+    <select id="getMineExam" resultMap="mapResult">
+        SELECT exam_id,exam_name from Exam where user_id=#{uid}
+    </select>
+
+    <select id="getQuestions" resultMap="QuestionMap">
+        select * from Questions where q_id in (select question_id from Paper_Q where paper_id =(SELECT paper_id from Exam where exam_id=#{examId}))
     </select>
 </mapper>

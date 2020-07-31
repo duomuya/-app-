@@ -22,13 +22,20 @@ public class Exam {
 
     private Integer examNumber;
 
-    private Date examStart;
+    private String examStart;
 
     private String examCourse;
 
     private String paperId;
 
     private String userId;
+
+    private String courseName;
+
+    private String paperName;
+
+    private Integer scoreAll;
+    private Integer qNumber;
 
     public String getExamId() {
         return examId;
@@ -70,11 +77,11 @@ public class Exam {
         this.examNumber = examNumber;
     }
 
-    public Date getExamStart() {
+    public String getExamStart() {
         return examStart;
     }
 
-    public void setExamStart(Date examStart) {
+    public void setExamStart(String examStart) {
         this.examStart = examStart;
     }
 
@@ -100,5 +107,37 @@ public class Exam {
 
     public void setUserId(String userId) {
         this.userId = userId == null ? null : userId.trim();
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public String getPaperName() {
+        return paperName;
+    }
+
+    public void setPaperName(String paperName) {
+        this.paperName = paperName;
+    }
+
+    public Integer getScoreAll() {
+        return scoreAll;
+    }
+
+    public void setScoreAll(Integer scoreAll) {
+        this.scoreAll = scoreAll;
+    }
+
+    public Integer getqNumber() {
+        return qNumber;
+    }
+
+    public void setqNumber(Integer qNumber) {
+        this.qNumber = qNumber;
     }
 }

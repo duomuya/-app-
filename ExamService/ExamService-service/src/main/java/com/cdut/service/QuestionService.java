@@ -57,4 +57,10 @@ public interface QuestionService {
      * @return 试题列表
      */
     List<Question> queryAll();
+
+    List<Question> queryByPage(int page,int limit);
+
+    int getCount();
+
+    Question getQuestionById(String qId);
 }
