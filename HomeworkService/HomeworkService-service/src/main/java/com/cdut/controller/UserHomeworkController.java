@@ -24,6 +24,12 @@ public class UserHomeworkController {
     @Autowired
     private UserHomeworkService userHomeworkService;
 
+    //测试方法
+    @RequestMapping(value = "hello")
+    public String hello(){
+        return "hello";
+    }
+
     /**
      * @discript 根据课程id和批改状态查询学生作业
      * @param cId
@@ -54,7 +60,7 @@ public class UserHomeworkController {
      * @author fan
      * @date 2020/7/30 10:18
      */
-    @RequestMapping(value = "correct_homework/{uhId}/{uhScore}/{uhStatus}", method = {RequestMethod.POST})
+    @RequestMapping(value = "correct_homework/{uhId}/{uhScore}/{uhStatus}", method = {RequestMethod.GET})
     @ResponseBody
     public Result correct_homework(@PathVariable("uhId") String uhId, @PathVariable("uhScore") Integer uhScore,
                                    @PathVariable("uhStatus") Integer uhStatus){
@@ -79,7 +85,10 @@ public class UserHomeworkController {
      * @author fan
      * @date 2020/7/30 12:25
      */
-    public Result add_user_homework(String uId, String hId, String homeworkUserAnswer){
+    @RequestMapping(value = "add_user_homework/{uId}/{hId}/{homeworkUserAnswer}", method = {RequestMethod.GET})
+    @ResponseBody
+    public Result add_user_homework(@PathVariable("uId") String uId, @PathVariable("hId") String hId,
+                                    @PathVariable("homeworkUserAnswer") String homeworkUserAnswer){
         UserHomework userHomework = new UserHomework();
         Date date = new Date();
 
@@ -88,12 +97,14 @@ public class UserHomeworkController {
 //        String times = format.format(date.getTime());
 //        System.out.println(times);
 
-        userHomework.setUser_id(uId);
-        userHomework.setHomework_status(0);
         userHomework.setUh_id(UUID.randomUUID().toString());
+        userHomework.setUser_id(uId);
         userHomework.setHomework_id(hId);
-        userHomework.setHomework_date(new Timestamp(date.getTime()));
+        userHomework.setHomework_score(-1);
         userHomework.setHomework_user_answer(homeworkUserAnswer);
+        userHomework.setHomework_status(0);
+        userHomework.setHomework_date(new Timestamp(date.getTime()));
+
         int status = userHomeworkService.insert(userHomework);
         if (status <= 0) {
             return Result.failure(ResultCode.USERHOMEWORK_INSERT_FAILED);
@@ -101,4 +112,10 @@ public class UserHomeworkController {
             return Result.success();
         }
     }
+
+//    @Test
+//    public void test(){
+//        Date date = new Date();
+//        System.out.println(new Timestamp(date.getTime()));
+//    }
 }
