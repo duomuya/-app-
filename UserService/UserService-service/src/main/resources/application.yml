@@ -7,9 +7,9 @@ spring:
   application:
     name: userService
   datasource:
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
-    username: root
-    password: "!@#$%^"
+    url: jdbc:mysql://120.27.244.91:3306/quickapp
+    username: "root"
+    password: "admin123"
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:

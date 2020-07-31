@@ -1,14 +1,21 @@
 package com.cdut.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.cdut.pojo.Message;
+import com.cdut.service.ChatService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+import java.util.List;
+
+@RestController
 @RequestMapping("/chat")
 public class ChatController {
 
-    @RequestMapping("/index")
-    public String index(){
-        return "index";
+    @Autowired
+    private ChatService chatService;
+
+    @GetMapping("/chatMsg/{crId}")
+    public List<Message> getAllChatMsg(@PathVariable("crId") String crId){
+        return chatService.getAllChatMsg(crId);
     }
 }

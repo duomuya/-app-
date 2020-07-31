@@ -1,6 +1,7 @@
 package com.cdut.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author fan
@@ -9,18 +10,50 @@ import java.io.Serializable;
  */
 public class Homework implements Serializable {
     private String homework_id;
-    private String course_name;
+    private String teacher_id;
     private String homework_content;
     private String homework_answer;
+    private String course_id;
+    private Date homework_deadline;
+
+    //该属性便于页面获取课程名
+    private String course_name;
 
     @Override
     public String toString() {
         return "Homework{" +
-                "homeworkId=" + homework_id +
-                ", courseName='" + course_name + '\'' +
-                ", homeworkContent='" + homework_content + '\'' +
-                ", homeworkAnswer='" + homework_answer + '\'' +
+                "homework_id='" + homework_id + '\'' +
+                ", teacher_id='" + teacher_id + '\'' +
+                ", homework_content='" + homework_content + '\'' +
+                ", homework_answer='" + homework_answer + '\'' +
+                ", course_id='" + course_id + '\'' +
+                ", homework_deadline=" + homework_deadline +
+                ", course_name='" + course_name + '\'' +
                 '}';
+    }
+
+    public String getCourse_name() {
+        return course_name;
+    }
+
+    public void setCourse_name(String course_name) {
+        this.course_name = course_name;
+    }
+
+    public String getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(String course_id) {
+        this.course_id = course_id;
+    }
+
+    public Date getHomework_deadline() {
+        return homework_deadline;
+    }
+
+    public void setHomework_deadline(Date homework_deadline) {
+        this.homework_deadline = homework_deadline;
     }
 
     public String getHomework_id() {
@@ -31,12 +64,12 @@ public class Homework implements Serializable {
         this.homework_id = homework_id;
     }
 
-    public String getCourse_name() {
-        return course_name;
+    public String getTeacher_id() {
+        return teacher_id;
     }
 
-    public void setCourse_name(String course_name) {
-        this.course_name = course_name;
+    public void setTeacher_id(String course_name) {
+        this.teacher_id = course_name;
     }
 
     public String getHomework_content() {

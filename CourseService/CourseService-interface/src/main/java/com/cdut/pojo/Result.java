@@ -1,0 +1,76 @@
+package com.cdut.pojo;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Date: 2020/06/04 22:18
+ * Description:
+ * Version: V1.0
+ * @author healer
+ */
+public class Result {
+
+    private Object data;
+    private Integer code;
+    private String message;
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "data=" + data +
+                ", code=" + code +
+                ", message='" + message + '\'' +
+                '}';
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    private Result(ResultCode resultCode) {
+        this.code = resultCode.getCode();
+        this.message = resultCode.getMessage();
+    }
+
+    private Result(ResultCode resultCode, Object data) {
+        this.code = resultCode.getCode();
+        this.message = resultCode.getMessage();
+        this.data = data;
+    }
+
+    public static Result success() {
+        return new Result(ResultCode.SUCCESS);
+    }
+
+    public static Result success(Object data) {
+        return new Result(ResultCode.SUCCESS, data);
+    }
+
+    public static Result failure(ResultCode resultCode) {
+        return new Result(resultCode);
+    }
+
+    public static Result failure(ResultCode resultCode, Object data) {
+        return new Result(resultCode, data);
+    }
+
+}

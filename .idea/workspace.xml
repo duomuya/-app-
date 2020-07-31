@@ -1,57 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-interface/src/main/java/com/cdut/pojo/Homework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/controller/HomeworkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/mapper/HomeworkMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/HomeworkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/impl/HomeworkServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/ResultCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/mapper/HomeworkMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatService/ChatService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cduteduapp.iml" afterDir="false" />
+    <list default="true" id="dc7cfe7e-ee44-4d40-bf17-ac9af6a7fdfa" name="Default Changelist" comment="mdf 修改端口">
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/Chatroom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/vo/ChatRoomVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/vo/ChatVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/MyWebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/mapper/ChatMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/ChatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/impl/ChatServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/task/SchedulerTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/mapper/ChatMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/api/CoursesApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/pojo/Courses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/pojo/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/src/main/java/com/cdut/pojo/ResultCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/target/classes/com/cdut/api/CoursesApi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/target/classes/com/cdut/pojo/Courses.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/target/classes/com/cdut/pojo/Result.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/target/classes/com/cdut/pojo/ResultCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/controller/CoursesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/mapper/CoursesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/service/CoursesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/service/Impl/CoursesServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/mapper/CoursesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/static/coursesVideo/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/META-INF/CourseService-service.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/controller/CoursesController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/mapper/CoursesMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/service/CoursesService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/service/Impl/CoursesServiceImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/mapper/CoursesMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/static/coursesVideo/0c876cc1-fac5-49d4-b36e-f93afb23f3a6/2020-07-24 16-15-06.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/static/coursesVideo/8cf3019f-6fbb-41e8-b5a1-caab5cbbe26b/2020-06-16 22-30-05.mkv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/static/coursesVideo/8cf3019f-6fbb-41e8-b5a1-caab5cbbe26b/2020-07-24 16-15-06.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/static/coursesVideo/e857e143-531a-4095-9f6e-540a7400f8c0_2020-06-16 22-30-05.mkv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-interface/src/main/java/com/cdut/pojo/UserHomework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/controller/UserHomeworkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/mapper/UserHomeworkMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/UserHomeworkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/impl/UserHomeworkServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/mapper/UserHomeworkMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-interface/src/main/java/com/cdut/loginAPI/loginAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-interface/src/main/java/com/cdut/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/utils/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/utils/MD5Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/utils/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/java/com/cdut/utils/ResultCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/templates/out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/templates/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/config/MyWebSocket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/mapper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/utils/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/mapper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/static/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/static/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/com/cdut/ChatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/com/cdut/ChatService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatService/ChatService-service/target/classes/mapper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/java/com/cdut/CourseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/CourseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/CourseService/CourseService-service/target/classes/com/cdut/CourseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourseService/CourseService.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/com/cdut/ExamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ExamService/ExamService-service/target/classes/com/cdut/ExamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExamService/ExamService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-interface/src/main/java/com/cdut/pojo/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-interface/src/main/java/com/cdut/pojo/Homework.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/com/cdut/HomeworkService.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/classes/com/cdut/HomeworkService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/controller/HomeworkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/controller/HomeworkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/mapper/HomeworkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/mapper/HomeworkMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/HomeworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/HomeworkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/impl/HomeworkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/service/impl/HomeworkServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/mapper/HomeworkMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/mapper/HomeworkMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService-service/target/classes/com/cdut/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/UserService-service/target/classes/com/cdut/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserService/UserService.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/gateway.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/cdut/zuul/CdutZuulApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/com/cdut/zuul/CdutZuulApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/registry.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registry/target/classes/com/cdut/eureka/CdutEurekaApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/registry/target/classes/com/cdut/eureka/CdutEurekaApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/cdut/zuul/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/cdut/zuul/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/com/cdut/zuul/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/com/cdut/zuul/config/CorsConfig.class" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/ChatService/ChatService-interface/target/" />
+    <ignored path="$PROJECT_DIR$/CourseService/CourseService-interface/target/" />
+    <ignored path="$PROJECT_DIR$/ChatService/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/UserService/target/" />
+    <ignored path="$PROJECT_DIR$/HomeworkService/target/" />
+    <ignored path="$PROJECT_DIR$/registry/target/" />
+    <ignored path="$PROJECT_DIR$/HomeworkService/HomeworkService-service/target/" />
+    <ignored path="$PROJECT_DIR$/gateway/target/" />
+    <ignored path="$PROJECT_DIR$/UserService/UserService-interface/target/" />
+    <ignored path="$PROJECT_DIR$/ChatService/ChatService-service/target/" />
+    <ignored path="$PROJECT_DIR$/ExamService/ExamService-service/target/" />
+    <ignored path="$PROJECT_DIR$/CourseService/target/" />
+    <ignored path="$PROJECT_DIR$/ExamService/target/" />
+    <ignored path="$PROJECT_DIR$/CourseService/CourseService-service/target/" />
+    <ignored path="$PROJECT_DIR$/HomeworkService/HomeworkService-interface/target/" />
+    <ignored path="$PROJECT_DIR$/UserService/UserService-service/target/" />
+    <ignored path="$PROJECT_DIR$/ExamService/ExamService-interface/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="351785260">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.75" value="1" />
+          <entry key="project.opened" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="6" />
+          <entry key="css" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="5" />
+          <entry key="java" value="80" />
+          <entry key="js" value="5" />
+          <entry key="xml" value="20" />
+          <entry key="yml" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="6" />
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="5" />
+          <entry key="JAVA" value="80" />
+          <entry key="JavaScript" value="5" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="20" />
+          <entry key="YAML" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="11" />
+          <entry key="html" value="52" />
+          <entry key="java" value="2449" />
+          <entry key="js" value="32" />
+          <entry key="txt" value="18" />
+          <entry key="xml" value="408" />
+          <entry key="yml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="52" />
+          <entry key="JAVA" value="2449" />
+          <entry key="JavaScript" value="32" />
+          <entry key="PLAIN_TEXT" value="29" />
+          <entry key="SQL" value="12" />
+          <entry key="XML" value="396" />
+          <entry key="YAML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/ChatService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Mybatis Mapper" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/config/WebSocketConfig.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/template/index.html" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/static/css/index.css" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/SocketMsg.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/static/js/index.js" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/config/MyWebSocket.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/pojo/Chatroom.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/pojo/Message.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/Message.java" />
+        <option value="$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/mapper/ChatMapper.xml" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/ChatApp.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/vo/ChatVO.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/vo/ChatRoomVO.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/MyWebSocket.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/ChatService.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/mapper/ChatMapper.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/mapper/ChatMapper.xml" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/src/main/java/com/cdut/zuul/config/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/ChatController.java" />
+        <option value="$PROJECT_DIR$/gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/impl/ChatServiceImpl.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/task/SchedulerTask.java" />
+        <option value="$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/ChatService.java" />
+      </list>
+    </option>
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -60,12 +248,16 @@
       </set>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="E:\IDEA\maven\LocalWareHouse" />
-        <option name="mavenHome" value="E:/IDEA/maven/apache-maven-3.5.4" />
-        <option name="userSettingsFile" value="E:/IDEA/maven/apache-maven-3.5.4\conf\settings.xml" />
+        <option name="mavenHome" value="E:/maven/apache-maven-3.5.4" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -74,15 +266,80 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="376" />
-    <option name="y" value="37" />
-    <option name="width" value="1550" />
-    <option name="height" value="963" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1f8YheeWZ1g4yotAMYlRFQX0koG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eduapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eduapp" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatService-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cdut" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -94,25 +351,29 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595775448525" />
-    <property name="last_opened_file_path" value="E:/SVN/本地仓库/zhiliaotangLiteApp/trunk/support/training/后端学习SpringBoot+mybatis/郑超凡/cloudDemo" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1596168592202" />
+    <property name="last_opened_file_path" value="E:/javaee学习/idea/SpringCloud/fmjava-spring-cloud-parent" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2812106" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\学校课程\知了堂实训\整体项目\eduapp\ChatService\ChatService-service\src\main\resources\mapper" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cdut.utils" />
-      <recent name="com.cdut.config" />
       <recent name="com.cdut.zuul.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\git\project\cduteduapp\HomeworkService\HomeworkService-service\src\main\java\com\cdut\utils" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\registry\target\classes" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\registry\src\main\resources" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\gateway\src\main\resources" />
       <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\UserService\UserService-service\src\main\resources" />
+      <recent name="D:\DevelopTools\DevelopData\IDEA_data\eduapp\HomeworkService\HomeworkService-service\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,9 +392,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.3436073" />
+    <option name="contentProportion" value="0.18920764" />
   </component>
-  <component name="RunManager" selected="Spring Boot.UserService">
+  <component name="RunManager" selected="Spring Boot.ChatService">
     <configuration name="CdutEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="registry" />
       <extension name="coverage">
@@ -241,7 +502,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1ceb6c83" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1f071d1d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -265,8 +526,15 @@
       <workItem from="1595637991107" duration="5724000" />
       <workItem from="1595648693022" duration="4935000" />
       <workItem from="1595662776948" duration="925000" />
-      <workItem from="1595664679133" duration="3346000" />
-      <workItem from="1595728539776" duration="18305000" />
+      <workItem from="1595680989707" duration="3178000" />
+      <workItem from="1595760493231" duration="6483000" />
+      <workItem from="1595778021695" duration="1609000" />
+      <workItem from="1595832293087" duration="360000" />
+      <workItem from="1595923831806" duration="1297000" />
+      <workItem from="1595991820525" duration="32411000" />
+      <workItem from="1596077133922" duration="7828000" />
+      <workItem from="1596093262929" duration="6589000" />
+      <workItem from="1596166432860" duration="949000" />
     </task>
     <task id="LOCAL-00001" summary="add 项目框架搭建">
       <created>1595608697232</created>
@@ -289,15 +557,69 @@
       <option name="project" value="LOCAL" />
       <updated>1595643412640</updated>
     </task>
-    <task id="LOCAL-00004" summary="mdf 增加homework模块连接数据库增删改查功能">
-      <created>1595775332172</created>
+    <task id="LOCAL-00004" summary="mdf 聊天大体逻辑实现">
+      <created>1595778957186</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1595775332172</updated>
+      <updated>1595778957186</updated>
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="60826000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23190348" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.18156028" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.2496454" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.3602837" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32907802" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49865952" weight="0.18297872" />
+      <window_info anchor="bottom" id="JRebel Executor" order="14" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.31205675" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -318,18 +640,287 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add 项目框架搭建" />
     <MESSAGE value="add 空文件,上传包结构" />
     <MESSAGE value="mdf 修改端口" />
-    <MESSAGE value="mdf 增加homework模块连接数据库增删改查功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="mdf 增加homework模块连接数据库增删改查功能" />
+    <MESSAGE value="mdf 聊天大体逻辑实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="mdf 聊天大体逻辑实现" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/UserService/UserService-interface/src/main/java/com/cdut/pojo/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/static/css/index.css" />
+    <entry file="file://$PROJECT_DIR$/registry/src/main/java/com/cdut/eureka/CdutEurekaApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/utils/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2889">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/java/com/cdut/HomeworkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeworkService/HomeworkService-interface/src/main/java/com/cdut/pojo/Homework.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/static/js/index.js" />
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/config/WebSocketConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/Chatroom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/SocketMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="61" column="35" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/TestController.java" />
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/vo/ChatVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-interface/src/main/java/com/cdut/pojo/vo/ChatRoomVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.34/tomcat-embed-websocket-8.5.34.jar!/org/apache/tomcat/websocket/WsRemoteEndpointImplBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="783" selection-start-line="783" selection-end-line="783" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/mapper/ChatMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/resources/mapper/ChatMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserService/UserService-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserService/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/cdut/zuul/CdutZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.10.RELEASE/spring-web-5.0.10.RELEASE.jar!/org/springframework/web/filter/CorsFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar!/org/springframework/boot/web/servlet/AbstractFilterRegistrationBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="86" lean-forward="true" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar!/org/springframework/boot/web/servlet/DynamicRegistrationBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="79" lean-forward="true" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar!/org/springframework/boot/web/servlet/RegistrationBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.0.6.RELEASE/spring-boot-2.0.6.RELEASE.jar!/org/springframework/boot/web/servlet/FilterRegistrationBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserService/UserService-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeworkService/HomeworkService-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExamService/ExamService-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CourseService/CourseService-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/cdut/zuul/config/CorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="20" column="57" lean-forward="true" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/task/SchedulerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/impl/ChatServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/service/ChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/MyWebSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/controller/ChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChatService/ChatService-service/src/main/java/com/cdut/ChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

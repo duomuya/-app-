@@ -13,7 +13,7 @@ import java.util.List;
 @Mapper
 public interface HomeworkMapper {
     public List<Homework> findAll();
-    public Homework findById(String id);
+    public List<Homework> findById(String id);
     public int deleteById(String id);
     public int insert(Homework homework);
     public int update(Homework homework);

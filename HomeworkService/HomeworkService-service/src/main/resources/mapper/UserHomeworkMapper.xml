@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cdut.mapper.UserHomeworkMapper">
+    <select id="queryAll" resultType="com.cdut.pojo.UserHomework">
+        select * from User_homework
+    </select>
+
+    <select id="findByRequirement" resultType="com.cdut.pojo.UserHomework" parameterType="com.cdut.pojo.UserHomework">
+        select * from User_homework where homework_id in (
+            select homework_id from Homework where course_id=#{course_id}
+        )
+        and homework_status=#{homework_status}
+    </select>
+
+    <update id="update" parameterType="com.cdut.pojo.UserHomework">
+        update User_homework set homework_score=#{homework_score}, homework_status=#{homework_status} where uh_id=#{uh_id}
+    </update>
+
+    <insert id="insert" parameterType="com.cdut.pojo.UserHomework">
+        insert into User_homework(uh_id,user_id,homework_id,homework_score,homework_user_answer,homework_date,homework_status)
+            values(#{uh_id},#{user_id},#{homework_id},#{homework_score},#{homework_user_answer},#{homework_date},#{homework_status})
+    </insert>
+</mapper>
