@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface HomeworkService {
     public List<Homework> queryAll();
-    public Homework findById(String id);
+    public List<Homework> findByTeacherId(String uId);
     public int deleteById(String id);
     public int insert(Homework homework);
     public int update(Homework homework);

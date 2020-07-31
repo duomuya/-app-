@@ -25,7 +25,7 @@ public class HomeworkServiceImpl implements HomeworkService{
     }
 
     @Override
-    public Homework findById(String id) {
+    public List<Homework> findByTeacherId(String id) {
         return homeworkMapper.findById(id);
     }
 

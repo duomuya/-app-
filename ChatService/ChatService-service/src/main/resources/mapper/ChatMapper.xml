@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cdut.mapper.ChatMapper">
+    <resultMap id="msgMap" type="com.cdut.pojo.Message">
+        <id property="gmId" column="gm_id"/>
+        <result property="gmContent" column="gm_content"/>
+        <result property="gmFromId" column="gm_fromid"/>
+        <result property="gmFromName" column="gm_fromname"/>
+        <result property="gmCreatetime" column="gm_createtime"/>
+        <result property="crId" column="cr_id"/>
+    </resultMap>
+    
+    <insert id="saveMessage" parameterType="java.util.List">
+        INSERT INTO `message`
+        VALUES
+        <foreach collection="messages" item="message" index= "index" separator =",">
+            (
+                #{message.gmId},
+                #{message.gmContent},
+                #{message.gmFromId},
+                #{message.gmFromName},
+                #{message.gmCreatetime},
+                #{message.crId}
+            )
+        </foreach>
+    </insert>
+
+    <select id="getAllChatMsg" resultMap="msgMap">
+        SELECT *
+        FROM `message`
+        WHERE `cr_id` = #{crId}
+        ORDER BY `gm_createtime` ASC
+    </select>
+</mapper>
