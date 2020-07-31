@@ -8,49 +8,39 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ChatService-service" />
         <module name="UserServiceinterface" />
-        <module name="ChatServiceservice" />
         <module name="HomeworkServiceservice" />
-        <module name="ExamService-service" />
         <module name="gateway" />
+        <module name="UserServiceservice" />
         <module name="ChatService-interface" />
+        <module name="registry" />
         <module name="UserService-interface" />
-        <module name="CourseServiceservice" />
+        <module name="ExamService-service" />
         <module name="HomeworkService-interface" />
         <module name="ExamServiceinterface" />
-        <module name="registry" />
-        <module name="ExamServiceservice" />
         <module name="HomeworkServiceinterface" />
+        <module name="ExamServiceservice" />
+        <module name="CourseServiceservice" />
         <module name="ChatServiceinterface" />
         <module name="UserService-service" />
         <module name="ExamService-interface" />
         <module name="CourseServiceinterface" />
         <module name="CourseService-service" />
-        <module name="UserServiceservice" />
-        <module name="HomeworkService-service" />
         <module name="CourseService-interface" />
+        <module name="HomeworkService-service" />
+        <module name="ChatServiceservice" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ChatService-interface" options="-parameters" />
-      <module name="ChatService-service" options="-parameters" />
       <module name="ChatServiceinterface" options="-parameters" />
       <module name="ChatServiceservice" options="-parameters" />
-      <module name="CourseService-interface" options="-parameters" />
-      <module name="CourseService-service" options="-parameters" />
       <module name="CourseServiceinterface" options="-parameters" />
       <module name="CourseServiceservice" options="-parameters" />
-      <module name="ExamService-interface" options="-parameters" />
-      <module name="ExamService-service" options="-parameters" />
       <module name="ExamServiceinterface" options="-parameters" />
       <module name="ExamServiceservice" options="-parameters" />
-      <module name="HomeworkService-interface" options="-parameters" />
-      <module name="HomeworkService-service" options="-parameters" />
       <module name="HomeworkServiceinterface" options="-parameters" />
       <module name="HomeworkServiceservice" options="-parameters" />
-      <module name="UserService-interface" options="-parameters" />
-      <module name="UserService-service" options="-parameters" />
       <module name="UserServiceinterface" options="-parameters" />
       <module name="UserServiceservice" options="-parameters" />
       <module name="eduapp" options="-parameters" />

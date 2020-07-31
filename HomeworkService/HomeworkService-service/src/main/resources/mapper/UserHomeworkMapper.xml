@@ -14,7 +14,7 @@
     </select>
 
     <update id="update" parameterType="com.cdut.pojo.UserHomework">
-        update User_homework set homework_score=#{homework_score}, homewor_status=#{homewor_status} where uh_id=#{uh_id}
+        update User_homework set homework_score=#{homework_score}, homework_status=#{homework_status} where uh_id=#{uh_id}
     </update>
 
     <insert id="insert" parameterType="com.cdut.pojo.UserHomework">
