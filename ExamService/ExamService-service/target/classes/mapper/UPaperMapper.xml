@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cdut.mapper.UPaperMapper">
+    <resultMap id="BaseResultMap" type="com.cdut.pojo.UPaper">
+        <id column="up_id" jdbcType="VARCHAR" property="upId"/>
+        <result column="answer_detail" jdbcType="VARCHAR" property="answerDetail"/>
+        <result column="commit_time" jdbcType="VARCHAR" property="commitTime"/>
+        <result column="score" jdbcType="INTEGER" property="score"/>
+        <result column="comment" jdbcType="VARCHAR" property="comment"/>
+        <result column="check_status" jdbcType="INTEGER" property="checkStatus"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="exam_id" jdbcType="VARCHAR" property="examId"/>
+        <result column="exam_name" jdbcType="VARCHAR" property="examName"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+
+    up_id, answer_detail, commit_time, score, comment, check_status, user_id, exam_id
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from User_paper
+        where up_id = #{upId,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from User_paper
+    where up_id = #{upId,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.cdut.pojo.UPaper">
+    insert into User_paper (up_id, answer_detail, commit_time, 
+      score, comment, check_status, 
+      user_id, exam_id)
+    values (#{upId,jdbcType=VARCHAR}, #{answerDetail,jdbcType=VARCHAR}, #{commitTime,jdbcType=VARCHAR}, 
+      #{score,jdbcType=INTEGER}, #{comment,jdbcType=VARCHAR}, #{checkStatus,jdbcType=INTEGER}, 
+      #{userId,jdbcType=VARCHAR}, #{examId,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.cdut.pojo.UPaper">
+        insert into User_paper
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="upId != null">
+                up_id,
+            </if>
+            <if test="answerDetail != null">
+                answer_detail,
+            </if>
+            <if test="commitTime != null">
+                commit_time,
+            </if>
+            <if test="score != null">
+                score,
+            </if>
+            <if test="comment != null">
+                comment,
+            </if>
+            <if test="checkStatus != null">
+                check_status,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="examId != null">
+                exam_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="upId != null">
+                #{upId,jdbcType=VARCHAR},
+            </if>
+            <if test="answerDetail != null">
+                #{answerDetail,jdbcType=VARCHAR},
+            </if>
+            <if test="commitTime != null">
+                #{commitTime,jdbcType=VARCHAR},
+            </if>
+            <if test="score != null">
+                #{score,jdbcType=INTEGER},
+            </if>
+            <if test="comment != null">
+                #{comment,jdbcType=VARCHAR},
+            </if>
+            <if test="checkStatus != null">
+                #{checkStatus,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="examId != null">
+                #{examId,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.cdut.pojo.UPaper">
+        update User_paper
+        <set>
+            <if test="answerDetail != null">
+                answer_detail = #{answerDetail,jdbcType=VARCHAR},
+            </if>
+            <if test="commitTime != null">
+                commit_time = #{commitTime,jdbcType=VARCHAR},
+            </if>
+            <if test="score != null">
+                score = #{score,jdbcType=INTEGER},
+            </if>
+            <if test="comment != null">
+                comment = #{comment,jdbcType=VARCHAR},
+            </if>
+            <if test="checkStatus != null">
+                check_status = #{checkStatus,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=VARCHAR},
+            </if>
+            <if test="examId != null">
+                exam_id = #{examId,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where up_id = #{upId,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.cdut.pojo.UPaper">
+    update User_paper
+    set answer_detail = #{answerDetail,jdbcType=VARCHAR},
+      commit_time = #{commitTime,jdbcType=VARCHAR},
+      score = #{score,jdbcType=INTEGER},
+      comment = #{comment,jdbcType=VARCHAR},
+      check_status = #{checkStatus,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=VARCHAR},
+      exam_id = #{examId,jdbcType=VARCHAR}
+    where up_id = #{upId,jdbcType=VARCHAR}
+  </update>
+
+    <select id="selectByUid" resultMap="BaseResultMap">
+    select a.*,b.exam_name,c.user_name
+    from User_paper a
+    inner join Exam b
+    on a.exam_id=b.exam_id
+    inner join User c
+    on a.user_id=c.user_id
+    where a.exam_id in (SELECT exam_id FROM Exam where user_id=#{uid}) and a.check_status=#{status}
+    limit #{pageStart},#{pageLimit}
+  </select>
+
+    <select id="selectCountById" resultType="java.lang.Integer">
+    select count(*) from User_paper where exam_id in(select exam_id from Exam where user_id=#{uid}) and check_status=#{status}
+  </select>
+
+    <select id="selectByEid" resultMap="BaseResultMap">
+    select * from User_paper where exam_id=#{examId} limit #{page},#{limit}
+  </select>
+
+    <select id="selectByStatus" resultMap="BaseResultMap">
+        select a.*,b.exam_name,c.user_name
+        from User_paper a
+        inner join Exam b
+        on a.exam_id=b.exam_id
+        inner join User c
+        on a.user_id=c.user_id
+        where a.check_status=#{status}
+        limit #{page},#{limit}
+  </select>
+
+    <select id="selectByEidAndStatus" resultMap="BaseResultMap">
+        select a.*,b.exam_name,c.user_name
+        from User_paper a
+        inner join Exam b
+        on a.exam_id=b.exam_id
+        inner join User c
+        on a.user_id=c.user_id
+        where a.exam_id=#{examId} and a.check_status=#{status}
+        limit #{page},#{limit}
+    </select>
+
+    <select id="selectCountByEid" resultType="java.lang.Integer">
+    select count(*) from User_paper where exam_id=#{examId}
+  </select>
+
+    <select id="selectCountByStatus" resultType="java.lang.Integer">
+    select count(*) from User_paper where check_status=#{status}
+  </select>
+
+    <select id="selectCountByEidAndStatus" resultType="java.lang.Integer">
+    select count(*) from User_paper where check_status=#{status} and exam_id=#{examId}
+  </select>
+</mapper>
