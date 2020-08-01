@@ -155,18 +155,4 @@ public class HomeworkController {
         }
     }
 
-    //联合查询
-//    public List<UserHomework> show_stu_homework(String cId, Integer uhStatus);//query
-    /**
-     * @discript  根据条件作业答题查询（用户作业表）
-     * @param cId
-     * @param uhStatus
-     * @return com.cdut.utils.Result
-     * @author fan
-     * @date 2020/7/29 16:34
-     */
-//    public Result show_stu_homework(String cId, Integer uhStatus){
-//        return null;
-//    }
-//    public int correct_homework(String uhId, Integer uhScore, Integer  uhStatus);//update
 }

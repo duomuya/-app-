@@ -14,7 +14,7 @@
     </select>
 
     <select id="findById" resultType="com.cdut.pojo.Homework" parameterType="java.lang.String">
-        select * from Homework where teacher_id=#{teacher_id}
+        select * from Homework,Courses where Homework.teacher_id=#{teacher_id} and Homework.course_id = Courses.course_id;
     </select>
 
     <insert id="insert" parameterType="com.cdut.pojo.Homework">

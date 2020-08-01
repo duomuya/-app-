@@ -17,7 +17,9 @@ public class UserHomework {
     private String homework_user_answer;
     private Timestamp homework_date;
 
+    //便于查询
     private String course_id;
+    private String course_name;
 
     @Override
     public String toString() {
@@ -30,7 +32,16 @@ public class UserHomework {
                 ", homework_user_answer='" + homework_user_answer + '\'' +
                 ", homework_date=" + homework_date +
                 ", course_id='" + course_id + '\'' +
+                ", course_name='" + course_name + '\'' +
                 '}';
+    }
+
+    public String getCourse_name() {
+        return course_name;
+    }
+
+    public void setCourse_name(String course_name) {
+        this.course_name = course_name;
     }
 
     public String getCourse_id() {
