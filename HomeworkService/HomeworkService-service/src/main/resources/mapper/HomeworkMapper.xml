@@ -13,12 +13,23 @@
         select * from Homework,Courses where Homework.course_id = Courses.course_id
     </select>
 
-    <select id="findById" resultType="com.cdut.pojo.Homework" parameterType="java.lang.String">
-        select * from Homework,Courses where Homework.teacher_id=#{teacher_id} and Homework.course_id = Courses.course_id;
+    <select id="findByCourseId" resultType="com.cdut.pojo.Homework">
+        select * from Homework,Courses where Homework.course_id = #{cId} and Courses.course_id = #{cId}
+    </select>
+
+
+    <select id="findById" resultType="com.cdut.pojo.Homework">
+        select * from Homework,Courses where
+            Homework.teacher_id=#{uId} and Homework.course_id = Courses.course_id
+            limit #{page},#{limit}
+    </select>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        select count(*) from Homework where teacher_id=#{uId}
     </select>
 
     <insert id="insert" parameterType="com.cdut.pojo.Homework">
-        insert into Homework(homework_id,teacher_id,homework_content,homework_answer,course_id) values(#{homework_id},#{teacher_id},#{homework_content},#{homework_answer},#{course_id})
+        insert into Homework(homework_id,teacher_id,homework_content,homework_answer,course_id,homework_deadline) values(#{homework_id},#{teacher_id},#{homework_content},#{homework_answer},#{course_id},#{homework_deadline})
     </insert>
 
     <delete id="deleteById" parameterType="java.lang.String">
@@ -26,6 +37,6 @@
     </delete>
 
     <update id="update" parameterType="com.cdut.pojo.Homework">
-        update Homework set course_id = #{course_id}, teacher_id = #{teacher_id}, homework_content = #{homework_content}, homework_answer = #{homework_answer} where homework_id = #{homework_id}
+        update Homework set course_id = #{course_id}, teacher_id = #{teacher_id}, homework_content = #{homework_content}, homework_answer = #{homework_answer}, homework_deadline=#{homework_deadline} where homework_id= #{homework_id}
     </update>
 </mapper>

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.sql.Date;
 
@@ -26,6 +27,12 @@ public class HomeworkController {
     @RequestMapping(value = "hello")
     public String hello(){
         return "hello";
+    }
+
+    @RequestMapping(value = "findByCourseId/{cId}", method = {RequestMethod.GET})
+    @ResponseBody
+    public Result findByCourseId(@PathVariable("cId") String cId){
+        return Result.success(homeworkService.findByCourseId(cId));
     }
 
     /**
@@ -50,14 +57,15 @@ public class HomeworkController {
      * @author fan
      * @date 2020/7/29 16:35
      */
-    @RequestMapping(value = "show_mine_homework/{uId}", method = {RequestMethod.GET})
+    @RequestMapping(value = "show_mine_homework", method = {RequestMethod.GET})
     @ResponseBody
-    public Result show_mine_homework(@PathVariable("uId") String uId){
-        List<Homework> list = homeworkService.findByTeacherId(uId);
+    public Result show_mine_homework(Integer page, Integer limit, String uId){
+        List<Homework> list = homeworkService.findByTeacherId(uId, (page-1)*limit, limit);
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("homework", list);
-        result.put("count", list.size());
-        return Result.success(list);
+        int count = homeworkService.getCount(uId);
+        result.put("count", count);
+        return Result.success(result);
     }
 
     /**
@@ -80,14 +88,16 @@ public class HomeworkController {
 
     /**
      * @discript 批量删除
-     * @param delist
+     * @param map
      * @return com.cdut.utils.Result
      * @author fan
      * @date 2020/7/29 15:29
      */
-    @RequestMapping(value = "delete_homework/{delist}", method = {RequestMethod.POST})
+    @RequestMapping(value = "batch_delete_homework", method = {RequestMethod.POST})
     @ResponseBody
-    public Result batch_delete_homework(@PathVariable("delist") List<String> delist){
+    public Result batch_delete_homework(@RequestBody Map<String, Object> map){
+        List<String> delist = (List<String>)map.get("delist");
+//        @PathVariable("delist") List<String> delist
         for (String hId:delist) {
             int status = homeworkService.deleteById(hId);
             if (status<=0){
@@ -106,7 +116,20 @@ public class HomeworkController {
      */
     @RequestMapping(value = "add_homework", method = {RequestMethod.POST})
     @ResponseBody
-    public Result add_homework(String hContent, String hAnswer, String cId, String uId, Date uhDeadline){
+    public Result add_homework(@RequestBody Map<String, Object> map){
+//        @PathVariable("hContent") String hContent,
+//                               @PathVariable("hAnswer") String hAnswer,
+//                               @PathVariable("cId")String cId,
+//                               @PathVariable("uId")String uId,
+//                               @PathVariable("uhDeadline")Date uhDeadline
+        String hAnswer = (String)map.get("hAnswer");
+        String hContent = (String)map.get("hContent");
+        String cId = (String)map.get("cId");
+        String uId = (String)map.get("uId");
+        String date = (String) map.get("uhDeadline");
+
+        Date uhDeadline = strToDate(date);
+
         Homework homework = new Homework();
         String homework_id = UUID.randomUUID().toString();
         homework.setHomework_id(homework_id);
@@ -125,21 +148,23 @@ public class HomeworkController {
 
     /**
      * @discript 作业编辑
-     * @param hId
-     * @param hContent
-     * @param hAnswer
-     * @param cId
-     * @param uId
-     * @param uhDeadline
+     * @param map
      * @return com.cdut.utils.Result
      * @author fan
      * @date 2020/7/29 15:21
      */
-    @RequestMapping(value = "update_homework/{hId}/{hContent}/{hAnswer}/{cId}/{uId}/{uhDeadline}", method = {RequestMethod.POST})
+    @RequestMapping(value = "update_homework", method = {RequestMethod.POST})
     @ResponseBody
-    public Result update_homework(@PathVariable("hId") String hId, @PathVariable("hContent") String hContent,
-                         @PathVariable("hAnswer") String hAnswer, @PathVariable("cId") String cId,
-                         @PathVariable("uId") String uId, @PathVariable("uhDeadline") Date uhDeadline) {
+    public Result update_homework(@RequestBody Map<String, Object> map) {
+        String hId = (String) map.get("hId");
+        String uId = (String) map.get("uId");
+        String cId = (String) map.get("cId");
+        String hContent = (String) map.get("hContent");
+        String hAnswer = (String) map.get("hAnswer");
+        String date = (String) map.get("hDeadline");
+
+        Date uhDeadline = strToDate(date);
+
         Homework homework = new Homework();
         homework.setHomework_id(hId);
         homework.setTeacher_id(uId);
@@ -155,4 +180,17 @@ public class HomeworkController {
         }
     }
 
+
+    public static java.sql.Date strToDate(String strDate) {
+        String str = strDate;
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date d = null;
+        try {
+            d = format.parse(str);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        java.sql.Date date = new java.sql.Date(d.getTime());
+        return date;
+    }
 }

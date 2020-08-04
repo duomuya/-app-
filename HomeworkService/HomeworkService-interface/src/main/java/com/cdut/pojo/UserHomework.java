@@ -20,6 +20,8 @@ public class UserHomework {
     //便于查询
     private String course_id;
     private String course_name;
+    private String user_name;
+    private String homework_content;
 
     @Override
     public String toString() {
@@ -33,8 +35,27 @@ public class UserHomework {
                 ", homework_date=" + homework_date +
                 ", course_id='" + course_id + '\'' +
                 ", course_name='" + course_name + '\'' +
+                ", user_name='" + user_name + '\'' +
+                ", homework_content='" + homework_content + '\'' +
                 '}';
     }
+
+    public String getHomework_content() {
+        return homework_content;
+    }
+
+    public void setHomework_content(String homework_content) {
+        this.homework_content = homework_content;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
 
     public String getCourse_name() {
         return course_name;

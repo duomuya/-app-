@@ -38,32 +38,42 @@ public class UserHomeworkController {
      * @author fan
      * @date 2020/7/30 10:13
      */
-    @RequestMapping(value = "show_stu_homework/{cId}/{uhStatus}", method = {RequestMethod.GET})
+    @RequestMapping(value = "show_stu_homework", method = {RequestMethod.GET})
     @ResponseBody
-    public Result show_stu_homework(@PathVariable("cId") String cId, @PathVariable("uhStatus") Integer uhStatus){
+    public Result show_stu_homework(Integer page, Integer limit, String cId, Integer uhStatus, String uId){
+        System.out.println("||"+page+"||"+limit+"||"+cId+"||"+uhStatus+"||"+uId);
         UserHomework userHomework = new UserHomework();
         userHomework.setHomework_status(uhStatus);
         userHomework.setCourse_id(cId);
-        List<UserHomework> list = userHomeworkService.findByRequirement(userHomework);
+        List<UserHomework> list = null;
+        int count = 0;
+        if (cId!=null && cId!=""){
+            list = userHomeworkService.findByRequirementByCourse((page-1)*limit, limit, cId, uhStatus, uId);
+            count = userHomeworkService.getCountByCourse(cId, uhStatus);
+        }else {
+            list = userHomeworkService.findByRequirementByTeacher((page-1)*limit, limit, uId, uhStatus);
+            count = userHomeworkService.getCountByTeacher(uId, uhStatus);
+        }
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("stuHomework", list);
-        result.put("count", list.size());
+        result.put("count", count);
         return Result.success(result);
     }
 
     /**
      * @discript    批改作业 update
-     * @param uhId
-     * @param uhScore
-     * @param uhStatus
+     * @param map
      * @return com.cdut.utils.Result
      * @author fan
      * @date 2020/7/30 10:18
      */
-    @RequestMapping(value = "correct_homework/{uhId}/{uhScore}/{uhStatus}", method = {RequestMethod.GET})
+    @RequestMapping(value = "correct_homework", method = {RequestMethod.POST})
     @ResponseBody
-    public Result correct_homework(@PathVariable("uhId") String uhId, @PathVariable("uhScore") Integer uhScore,
-                                   @PathVariable("uhStatus") Integer uhStatus){
+    public Result correct_homework(@RequestBody Map<String, Object> map){
+        Integer uhStatus = (Integer) map.get("uhStatus");
+        Integer uhScore = (Integer) map.get("uhScore");
+        String uhId = (String) map.get("uhId");
+
         UserHomework userHomework = new UserHomework();
         userHomework.setHomework_status(uhStatus);
         userHomework.setHomework_score(uhScore);
@@ -78,17 +88,18 @@ public class UserHomeworkController {
 
     /**
      * @discript 提交作业
-     * @param uId
-     * @param hId
-     * @param homeworkUserAnswer
+     * @param map
      * @return com.cdut.utils.Result
      * @author fan
      * @date 2020/7/30 12:25
      */
-    @RequestMapping(value = "add_user_homework/{uId}/{hId}/{homeworkUserAnswer}", method = {RequestMethod.GET})
+    @RequestMapping(value = "add_user_homework", method = {RequestMethod.POST})
     @ResponseBody
-    public Result add_user_homework(@PathVariable("uId") String uId, @PathVariable("hId") String hId,
-                                    @PathVariable("homeworkUserAnswer") String homeworkUserAnswer){
+    public Result add_user_homework(@RequestBody Map<String, Object> map){
+        String uId = (String) map.get("uId");
+        String hId = (String) map.get("hId");
+        String homeworkUserAnswer = (String) map.get("homeworkUserAnswer");
+
         UserHomework userHomework = new UserHomework();
         Date date = new Date();
 

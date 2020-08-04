@@ -1,6 +1,7 @@
 package com.cdut.service;
 
 import com.cdut.pojo.Homework;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,8 +12,11 @@ import java.util.List;
  */
 public interface HomeworkService {
     public List<Homework> queryAll();
-    public List<Homework> findByTeacherId(String uId);
+    public List<Homework> findByTeacherId(String uId, Integer page, Integer limit);
     public int deleteById(String id);
     public int insert(Homework homework);
     public int update(Homework homework);
+    public int getCount(String uId);
+
+    public List<Homework> findByCourseId(String cId);
 }

@@ -25,8 +25,13 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
     }
 
     @Override
-    public List<UserHomework> findByRequirement(UserHomework userHomework) {
-        return userHomeworkMapper.findByRequirement(userHomework);
+    public List<UserHomework> findByRequirementByCourse(Integer page, Integer limit, String cId, Integer uhStatus, String uId) {
+        return userHomeworkMapper.findByRequirementByCourse(page, limit, cId, uhStatus, uId);
+    }
+
+    @Override
+    public List<UserHomework> findByRequirementByTeacher(Integer page, Integer limit, String uId, Integer uhStatus) {
+        return userHomeworkMapper.findByRequirementByTeacher(page, limit, uId, uhStatus);
     }
 
     @Override
@@ -37,5 +42,15 @@ public class UserHomeworkServiceImpl implements UserHomeworkService {
     @Override
     public int insert(UserHomework userHomework) {
         return userHomeworkMapper.insert(userHomework);
+    }
+
+    @Override
+    public int getCountByCourse(String cId, Integer uhStatus) {
+        return userHomeworkMapper.getCountByCourse(cId, uhStatus);
+    }
+
+    @Override
+    public int getCountByTeacher(String uId, Integer uhStatus) {
+        return userHomeworkMapper.getCountByTeacher(uId, uhStatus);
     }
 }

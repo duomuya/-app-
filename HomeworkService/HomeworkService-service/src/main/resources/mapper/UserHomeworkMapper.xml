@@ -6,14 +6,54 @@
         select * from User_homework
     </select>
 
-    <select id="findByRequirement" resultType="com.cdut.pojo.UserHomework" parameterType="com.cdut.pojo.UserHomework">
-        select *, course_name from User_homework,Courses where User_homework.homework_id in (
-            select homework_id from Homework where course_id=#{course_id}
-        )
-        and User_homework.homework_status=#{homework_status}
-        and Courses.course_name in (
-            select course_name from Courses where course_id=#{course_id}
-        )
+    <select id="findByRequirementByCourse" resultType="com.cdut.pojo.UserHomework">
+        SELECT a.*,b.course_name,c.user_name,d.homework_content
+        from User_homework a
+        inner join Homework d
+        on a.homework_id=d.homework_id
+        inner join Courses b
+        on b.course_id=d.course_id
+        inner join User c
+        on a.user_id=c.user_id
+        where a.homework_id in (SELECT homework_id from Homework where course_id=#{cId}) and a.homework_status=#{uhStatus}
+        limit #{page},#{limit}
+    </select>
+
+    <select id="getCountByCourse" resultType="java.lang.Integer">
+        SELECT count(*)
+        from User_homework a
+        inner join Homework d
+        on a.homework_id=d.homework_id
+        inner join Courses b
+        on b.course_id=d.course_id
+        inner join User c
+        on a.user_id=c.user_id
+        where a.homework_id in (SELECT homework_id from Homework where course_id=#{cId}) and a.homework_status=#{uhStatus}
+    </select>
+
+    <select id="findByRequirementByTeacher" resultType="com.cdut.pojo.UserHomework">
+        SELECT a.*,b.course_name,c.user_name,d.homework_content
+        from User_homework a
+        inner join Homework d
+        on a.homework_id=d.homework_id
+        inner join Courses b
+        on b.course_id=d.course_id
+        inner join User c
+        on a.user_id=c.user_id
+        where a.homework_id in (SELECT homework_id from Homework where course_id in (SELECT course_id FROM Courses where userT_id=#{uId})) and a.homework_status=#{uhStatus}
+        limit #{page},#{limit}
+    </select>
+
+    <select id="getCountByTeacher" resultType="java.lang.Integer">
+        SELECT count(*)
+        from User_homework a
+        inner join Homework d
+        on a.homework_id=d.homework_id
+        inner join Courses b
+        on b.course_id=d.course_id
+        inner join User c
+        on a.user_id=c.user_id
+        where a.homework_id in (SELECT homework_id from Homework where course_id in (SELECT course_id FROM Courses where userT_id=#{uId})) and a.homework_status=#{uhStatus}
     </select>
 
     <update id="update" parameterType="com.cdut.pojo.UserHomework">
